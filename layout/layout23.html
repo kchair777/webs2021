@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout23</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            width: 100%;
+            background: #999;
+        }
+        main{
+            width: 1200px;
+            background: #777;
+            margin: 0 auto;
+        }
+        header{
+            width: 100%;
+            height: 100px;
+            background: #e1bee7  ;
+        }
+        aside{
+            float: left;
+            width: 30%;
+            height: 600px;
+            background: #d1c4e9 ;
+        }
+        .box1{
+            width: 70%;
+            float: left;
+            height: 200px;
+            background: #f8bbd0 ;
+        }
+        .box2{
+            width: 70%;
+            float: left;
+            height: 200px;
+            background: #bbdefb ;
+        }
+        .box3{
+            width: 70%;
+            float: left;
+            height: 200px;
+            background: #80deea ;
+        }
+        footer{
+            clear: both;
+            width: 100%;
+            height: 100px;
+            background: #c8e6c9 ;
+        }
+        .clearfix{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        @media(max-width: 1220px){
+            main{width: 95%;}
+        }
+        @media(max-width: 900px){
+            main{width: 100%}
+            aside{height: 400px}
+            .box1{height: 200px}
+            .box2{height: 200px}
+            .box3{width: 100%; height: 200px;}
+        }
+        @media(max-width: 700px){
+            aside{float: none; width: 100%; height: 100px;}
+            .box1{width: 50%; height: 200px;}
+            .box2{width: 50%; height: 200px;}
+            .box3{width: 100%; height: 200px;}
+        }
+        @media(max-width: 500px){
+            aside{float: none; width: 100%; height: 200px;}
+            .box1{float: none; width: 100%; height: 200px;}
+            .box2{float: none; width: 100%; height: 200px;}
+            .box3{float: none; width: 100%; height: 200px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <main class="clearfix">
+            <header></header>
+            <aside></aside>
+            <article>
+                <div class="box1"></div>
+                <div class="box2"></div>
+                <div class="box3"></div>
+            </article>
+            <footer></footer>
+        </main>
+    </div>
+</body>
+</html>

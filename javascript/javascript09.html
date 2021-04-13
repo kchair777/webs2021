@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>javascript</title>
+</head>
+
+<body>
+    <script>
+        //변수 선언
+        let x = 100; //전역변수
+        let y = 200; //전역변수
+        let z = 7000; //전역변수
+
+        //함수 선언
+        function func1() {
+            let x = 100; //지역변수(함수 안에 위치하기 때문)
+            let y = 200; //지역변수(함수 밖에 있으면 위에 변수와 같기 때문에 오류)
+            z = 8000; //전역변수가 7000 -> 8000으로 변경
+
+            document.write("함수 안<br>");
+            document.write(x, "<br>");
+            document.write(y, "<br>");
+            document.write(z, "<br>");
+
+        }
+        func1();
+
+        document.write("함수 밖<br>");
+        document.write(x, "<br>");
+        document.write(y, "<br>");
+        document.write(z, "<br>");
+
+    </script>
+</body>
+
+</html>

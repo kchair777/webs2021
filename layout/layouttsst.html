@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>layout</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #wrap{
+      width: 1200px;
+      height: 900px;
+      background-color: #fff8e1 ;
+      margin: 0 auto;
+      font-size: 40px;
+      text-transform: uppercase;
+      color: #fbe9e7;
+      text-align: center;
+    }
+    #header{
+      width: 1200px;
+      height: 100px;
+      background-color: #ffa000  ;
+      line-height: 100px;
+    }
+    #nav{
+      width: 1200px;
+      height: 100px;
+      line-height: 100px;
+      background-color: #ffc107 ;
+    }
+    #side{
+      width: 400px;
+      height: 600px;
+      float: left;
+      line-height: 600px;
+      background-color: #ffca28 ;
+    }
+    #content1{
+      width: 800px;
+      height: 300px;
+      float: left;
+    line-height: 300px;
+      background-color: #ffe082 ;
+    }
+    #content2{
+      width: 800px;
+      height: 300px;
+      float: left;
+      background-color: #ffd54f ;
+    }
+    #footer{
+      width: 1200px;
+      height: 100px;
+      clear: both;
+      line-height: 100px;
+      background-color: #ffb300 ;
+    }
+    .container-cont1{ 
+      width: 300px;
+      height: 200px;
+      float: left;
+      margin: 45px 50px;
+      line-height: 200px;
+      background-color: rgba(0,0,0,0.3);
+       }
+    .container-cont2{  
+      width: 300px;
+      height: 200px;
+      float: left;
+      margin: 45px 50px;
+      line-height: 200px;
+      background-color: rgba(0,0,0,0.3);
+      }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">header</div>
+    <div id="nav">nav</div>
+    <div id="side">side</div>
+    <div id="content1">content1</div>
+    <div id="content2">
+      <div class="container-cont1">cont1</div>
+      <div class="container-cont2">cont2</div>
+    </div>
+    <div id="footer">footer</div>
+  </div>
+</body>
+</html>

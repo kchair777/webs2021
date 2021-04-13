@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+            background: #f0f4c3 ;
+        }
+        main{
+            width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+            background: #ffcc80 ;
+        }
+        header{
+            height: 100px;
+            background: #f9a825 ;
+        }
+        article{
+            height: 200px;
+            background: #fff176 ;
+        }
+        .con1{
+            background: #fff3e0 ;
+        }
+        .con2{
+            background: #ffd180 ;
+        }
+        .con3{
+            background: #ffee58 ;
+        }
+        footer{
+            clear: both;
+            height: 100px;
+            background: #f9a825 ;
+        }
+        .box1{
+            float: left;
+            width: 33.3333%;
+            height: 300px;
+            background: #fff9c4 ;
+        }
+        .box2{
+            float: left;
+            width: 66.6666%;
+            height: 150px;
+            background: #ffe082;
+        }
+        .box3{
+            float: left;
+            width: 66.6666%;
+            height: 150px;
+            background: #ffecb3 ;
+        }
+        .aa1{
+            width: 33.3333%;
+            height: 200px;
+            float: left;
+            background: #ffca28;
+        }
+        .aa2{
+            width: 33.3333%;
+            height: 200px;
+            float: left;
+            background: #ffc107 ;
+        }
+        .aa3{
+            width: 33.3333%;
+            height: 200px;
+            float: left;
+            background: #ffd740 ;
+        }
+        .con3 > article{
+            background: #ffe0b2 ;
+            width: 23%;
+            height: 150px;
+            margin: 1%;
+            float: left;
+        }
+        .clearfix{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        @media(max-width:1220px){
+            main{width: 100%;}
+            .aa1{width: 50%;}
+            .aa2{width: 50%;}
+            .aa3{display: none;}
+            .con3 > article {width: 30%;}
+            .con3 > article:last-child {display: none;}
+        }
+        @media(max-width:900px){
+            main{width: 100%;}
+            .aa1{width: 100%;}
+            .aa2{width: 100%;}
+            .aa3{display: none;}
+            .con3 > article {width: 30%;}
+            .con3 > article:last-child {display: none;}
+        }
+        @media(max-width:600px){
+            main{width: 100%;}
+            .box1{float: none; width: 100%;}
+            .box2{float: none; width: 100%;}
+            .box3{float: none; width: 100%;}
+            .aa1{width: 100%;}
+            .aa2{width: 100%;}
+            .aa3{display: none;}
+            .con3{height: 600px;}
+            .con3 > article {width: 97%;}
+            .con3 > article:last-child {display: none;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <main class="clearfix">
+            <header></header>
+            <article></article>
+            <section class="con1">
+                <article class="box1"></article>
+                <article class="box2"></article>
+                <article class="box3"></article>
+            </section>
+            <section class="con2">
+                <article class="aa1"></article>
+                <article class="aa2"></article>
+                <article class="aa3"></article>
+            </section>
+            <section class="con3">
+                <article class="ss1"></article>
+                <article class="ss2"></article>
+                <article class="ss3"></article>
+                <article class="ss4"></article>
+            </section>
+            <footer></footer>
+        </main>
+        
+    </div>
+</body>
+</html>

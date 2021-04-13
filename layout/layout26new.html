@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            background: rgb(205, 228, 235);
+        }
+        #header{
+            height: 100px;
+        }
+        #header .container{
+            padding-top: 40px;
+            height: inherit;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .logo{
+            width: 20%;
+            float: left;
+        }
+        .nav{
+            width: 60%;
+            float: left;
+        }
+        .nav li{            
+            display: inline;
+        }
+        .nav li a{
+            text-decoration: none;
+            color: black;
+            margin: 10px;
+        }
+        .login{
+            border: 1px solid #000;
+            border-radius: 20px;
+            width: 12%;
+            float: right;
+            text-align: right;
+            padding: 2px;
+            padding-right: 10px;
+        }
+        #banner{
+            position: relative;
+            color: #fff;
+            height: 500px;
+            background: url(img/banner-bg2.png);
+            background-size: cover;
+        }
+        .ban{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        #banner h3{
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        #banner p{
+            font-weight: bold;
+            font-size: 28px;
+        }
+        #content{
+            height: 1200px;
+        }
+        img{
+            width: 100%;
+        }
+        .cont1{
+            padding-top: 50px;
+            text-align: center;
+            margin: 0 auto;
+            width: 1130px;
+            height: 600px;
+        }
+        .cont1 span{
+            background: rgb(231, 231, 231);
+            border-radius: 20px;
+            padding: 3px 6px;
+        }
+        .cont1 h3{
+            font-size: 25px;
+            margin-top: 10px;
+        }
+        .cont1 img{
+            padding: 50px;
+            width: 800px;
+        }        
+        .cont2{
+            overflow: hidden;
+            margin: 0 auto;
+            width: 1130px;
+            height: 600px;
+        }
+        .con1{            
+            font-size: 18px;
+            text-align: center;
+            height: 150px;
+        }
+        .con1 p{
+            padding: 20px;
+        }
+        .con2{
+            color: #fff;
+            float: left;
+            width: 565px;
+            height: 400px;
+        }
+        .con2 h4{
+            padding: 10px 20px;
+            font-weight: normal;
+            font-size: 15px;
+        }
+        .con2 p{
+            padding-left: 20px;
+            font-weight: bold;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        .con2 a{   
+
+            padding: 30px 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .box1 img{
+            position: absolute;
+            width: 200px;
+            right: 0;
+            bottom: -30px;
+        }
+        .box1{            
+            position: relative;
+            width: 96%;
+            height: 46%;
+            margin: 2%;
+            border-radius: 20px;
+            background: rgb(84, 162, 235);
+        }
+        .box2{
+            overflow: hidden;
+            position: relative;
+            width: 96%;
+            height: 46%;
+            margin: 2%;
+            border-radius: 20px;
+            background: rgb(84, 162, 235);
+        }
+        .box2 img{
+            
+            position: absolute;
+            width: 200px;
+            right: 0;
+            bottom: -30px;
+        }
+        .box3{
+            color: #fff;
+            position: relative;
+            width: 96%;
+            height: 96%;
+            margin: 2%;
+            border-radius: 20px;
+            background: rgb(84, 162, 235);
+        }
+        .box3 h4{
+            padding: 10px 20px;
+            font-weight: normal;
+            font-size: 15px;
+        }
+        .box3 p{
+            padding-left: 20px;
+            font-weight: bold;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        .box3 a{   
+
+            padding: 30px 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .box3 img{
+            position: absolute;
+            right: 70px;
+            bottom: 0;
+            width: 400px;
+        }
+        .con3{
+            float: left;
+            width: 565px;
+            height: 400px;
+        }
+        #footer{
+            height: 235px;
+            background: #333;
+        }
+    </style>
+</head>
+<body>   
+   <div id="wrap">
+       <header id="header">
+           <div class="container">
+            <div class="logo">로고</div>
+            <div class="nav">
+             <ul>
+                 <li><a href="#c">인플루언서 안내</a></li>
+                 <li><a href="#c">광고수익 혜택</a></li>
+                 <li><a href="#c">성장 지원 프로그램</a></li>
+                 <li><a href="#c">브랜드커넥트</a></li>
+                 <li><a href="#c">공지</a></li>
+             </ul>
+            </div>
+            <div class="login">인플루언서 로그인</div>            
+           </div>
+       </header>
+       <section id="banner">
+           <div class="ban">
+            <h3>광고수익 혜택</h3>
+            <p>인플루언서의 수익을 더 높여줄<br>
+             특별한 광고가 제공됩니다.</p>
+           </div>           
+       </section>
+       <section id="content">
+           <div class="cont1">
+            <span>new</span>
+            <h3>더 커진 수익과 효과적인 노출<br>
+                새롭고 강력한 헤드뷰 광고를 선보입니다.</h3> 
+                <figure>
+                    <img src="img/content-img1.png" alt="컨텐츠이미지">
+                </figure>
+           </div>
+           <div class="cont2">
+               <div class="con1">
+                <p>새로운 헤드뷰 광고 상품은 콘텐츠에 방해되지
+                    않으면서도<br>뛰어난 노출과 수익을 제공하는
+                    신규 광고입니다.<br>네이버에서 적극적인 창작 활동을
+                    통해 더 좋아진 혜택을 경험해 보세요.</p> 
+               </div>
+               <div class="con2">
+                   <div class="box1">
+                    <h4>인플루언서 대상</h4>
+                    <p>인플루언서 홈 영역에<br>일반 광고 제공</p>
+                    <a href="#c">자세히 알아보기</a>
+                    <img src="img/cont2-img2.png" alt="a">
+                   </div>
+                   <div class="box2">
+                    <h4>상위 인플루언서 대상</h4>
+                    <p>더 높은 수익의<br>프리미엄 광고 제공</p>
+                    <a href="#c">자세히 알아보기</a>
+                    <img src="img/cont2-img1.png" alt="a">
+                   </div>
+               </div>
+               <div class="con3">
+                <div class="box3">
+                    <h4>우수 인플루언서 대상</h4>
+                    <p>다양한 브랜드와 연결될 수 있는<br>브랜드 커넥트 제공</p>
+                    <a href="#c">자세히 알아보기</a>
+                    <img src="img/cont2-img3.png" alt="#">
+                </div>
+               </div>
+           </div>
+       </section>
+       <footer id="footer"></footer>
+   </div>
+
+</body>
+</html>

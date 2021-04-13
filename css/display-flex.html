@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*reset*/
+        @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean');
+        @font-face {
+            font-family: 'BBTreeTR';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeTR.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'S-CoreDream-3Light';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        *::before, *::after {box-sizing: border-box;}
+        h1,h2,h3,h4,h5,h6 {font-weight: normal;}
+        em {font-style: normal;}
+        a {text-decoration: none;}
+
+        /*root*/
+        :root{
+            font-size: 22px;
+            --brown: #762917;
+            --bg-main: #f4b861;
+            --bg-sub: #fdf2e0;
+            --bg-white: #ffffff;
+            --font-black:'Black Han Sans';
+            --font-bbtree:'BBTreeTR';
+            --font-score:'S-CoreDream-3Light';
+        }
+        .mt10{margin-top: 10px !important;}
+        .mt20{margin-top: 20px !important;}
+        .mt30{margin-top: 30px !important;}
+        .mt40{margin-top: 40px !important;}
+        .mt50{margin-top: 50px !important;}
+
+        /*layout*/
+        #content{}
+        #main{background: var(--bg-main); padding-bottom: 100px;}
+        #about{background: var(--bg-main); height: 2000px;padding: 100px 0;}
+        #sample1{}
+        #sample2{}
+
+        /*container*/
+        .container{
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+
+        
+
+        /*main*/
+
+        .main_title strong {
+            font-family: var(--font-bbtree);
+            border: 3px solid var(--brown);
+            border-radius: 40px;
+            padding: 7px 20px;
+            color: var(--brown);
+            background: #fff;
+            font-size: 1rem;
+            display: inline-block;
+            margin: 1.4em 0.6em 0.9em 0;
+        }
+        .main_desc{
+            background: var(--bg-sub);
+            border: 4px solid var(--brown);
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main_desc::after{
+            content: '';
+            width: 100%;
+            height: 4px;
+            background: #762917;
+            position: absolute;
+            left: 0;
+            bottom: 16px;
+                }
+        .main_desc::before{
+            content: '';
+            width: 100%;
+            height: 4px;
+            background: #762917;
+            position: absolute;
+            left: 0;
+            bottom: 6px;
+        }
+        .main_desc h2 {
+            font-size: 80px;
+            font-family: var(--font-black);
+            color: #fff;
+            -webkit-text-stroke: 3px #762917;
+            font-weight: normal;
+            letter-spacing: -1px;
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+            padding-top: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .main_desc h2::after {
+            content: '';
+            position: absolute;
+            left: 0; bottom: 10px;
+            width: 100%;
+            height: 30px;
+            background: #FFA439;
+            border: 3px solid #762917;
+            z-index: -1;
+            border-radius: 30px;
+        }
+        .main_desc h1{
+            font-size: 180px;
+            line-height: 1.4;
+            font-family: var(--font-black);
+            font-weight: normal;
+            color: #e5774f;
+            letter-spacing: -10px;
+            -webkit-text-stroke: 3px #762917;
+        }
+        .main_desc h1 strong{
+            font-weight: normal;
+            color: #ffa439;
+        }
+        .main_desc p {
+            font-family: 'BBTreeTR';
+            color: #9E513C;
+            font-size: 36px;
+        }
+
+        /* sample */
+        .sample {
+            background: var(--bg-white);
+            border: 4px solid var(--brown);
+            padding: 5%;
+        }
+        .sample-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .sample-title h3 {
+            width: 30%;
+            border: 4px solid var(--brown);
+            font-family: var(--font-black);
+            font-size: 2rem;
+            color: var(--brown);
+            position: relative;
+            text-align: center;
+            padding: .3em 0 .1em 50px;
+        }
+        .sample-title h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50px;
+            height: 100%;
+            background: #C54435;
+        }
+        .sample-title h3::after {
+            content: '';
+            position: absolute;
+            left: 50px;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--brown);
+        }
+        .sample-title p {
+            width: 65%;
+            text-align: left;
+            font-size: 1.2rem;
+            line-height: 1.2;
+            font-family: var(--font-bbtree);
+            color: var(--brown);
+        }
+        .sample-table{}
+        .sample-table table{
+            width: 100%;
+            border: 4px solid var(--brown);
+            border-spacing: 0;
+            border-collapse: collapse;
+            font-family: var(--font-score);
+            font-size: 0.8rem;
+        }
+        .sample-table table td,
+        .sample-table table th{
+            border-bottom: 1px solid var(--brown); 
+            border-right: 1px solid var(--brown);
+            padding: 0.5em;
+        }
+        .sample-table table th{
+            border-bottom-width: 2px;            
+        }
+        .sample-table table tr:hover{
+            background: #f7d5cd;
+        }
+        .sample-table table caption{
+            text-indent: -9999px;
+        }
+        /*media*/
+        @media (max-width:1420px) {
+            .container {
+                width: calc(100% - 40px);                
+            }
+            .main_desc h2{font-size: 5.8vw;}
+            .main_desc h1{font-size: 12.3vw;}
+            .sample-title{flex-direction: column; text-align-last: left;}
+            .sample-title h3{width: 100%;}
+            .sample-title p{width: 100%; margin-top: 1em;}
+        }
+        @media(max-width:800px){
+            :root{font-size: 16px;}
+            .main_title strong{border-width: 2px;}
+            .main_desc{border-width: 2px;}
+            .main_desc h2{-webkit-text-stroke: 1px #762917;font-size: 30px;}
+            .main_desc h2::after{border-width: 1px #762917;height: 10px;bottom: 5px;}
+            .main_desc h1{-webkit-text-stroke: 1px #762917; letter-spacing: -1px;font-size: 50px;line-height: 1.1;}
+            .main_desc h1 em{display: block;}
+            .main_desc p{font-size: 20px;}
+            #main{padding-bottom: 50px;}
+            #about{padding: 0;}
+            .sample{border-width: 2px;}
+            .sample-title h3{border-width: 2px;}
+            .sample-title h3::after{width: 2px;}
+            .sample-table table{border-width: 2px;}
+            
+        }
+        /*dog option*/
+
+        .dog {
+                position: absolute;
+                left: 15%;
+                top: 33%;
+                width: 100px;
+                height: 100px;
+                z-index: 1;
+                margin: -90px auto;
+            }
+            .dog:before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background: rgba(0, 0, 0, 0.03);
+                transform: translateY(-30%) scale(1.5);
+            }
+            .dog * {
+                position: absolute;
+            }
+
+            .dog-body {
+                top: -50%;
+                -webkit-animation: dog-body 200ms ease-in-out infinite alternate;
+                animation: dog-body 200ms ease-in-out infinite alternate;
+            }
+            .dog-body:before {
+                content: "";
+                position: absolute;
+                bottom: 90%;
+                right: 50%;
+                width: 90%;
+                height: 90%;
+                border-top-left-radius: 100%;
+                border-bottom-left-radius: 10%;
+                border-top-right-radius: 10%;
+                background: rgba(255, 255, 255, 0.4);
+                transform-origin: right bottom;
+                -webkit-animation: dog-tail-blur 200ms 33.3333333333ms ease-in-out infinite alternate both;
+                animation: dog-tail-blur 200ms 33.3333333333ms ease-in-out infinite alternate both;
+            }
+            @-webkit-keyframes dog-tail-blur {
+                from {
+                    transform: rotate(0);
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 1;
+                }
+                to {
+                    transform: rotate(90deg);
+                    opacity: 0;
+                }
+            }
+            @keyframes dog-tail-blur {
+                from {
+                    transform: rotate(0);
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 1;
+                }
+                to {
+                    transform: rotate(90deg);
+                    opacity: 0;
+                }
+            }
+            @-webkit-keyframes dog-body {
+                from {
+                    transform: translateX(-10%);
+                }
+                to {
+                    transform: translateX(10%);
+                }
+            }
+            @keyframes dog-body {
+                from {
+                    transform: translateX(-10%);
+                }
+                to {
+                    transform: translateX(10%);
+                }
+            }
+
+            .dog-head {
+                -webkit-animation: dog-head 1800ms cubic-bezier(0.11, 0.79, 0, 0.99) infinite;
+                animation: dog-head 1800ms cubic-bezier(0.11, 0.79, 0, 0.99) infinite;
+            }
+            @-webkit-keyframes dog-head {
+                from,
+                to {
+                    transform: rotate(45deg);
+                }
+                33.3% {
+                    transform: rotate(-45deg);
+                }
+                66.6% {
+                    transform: rotate(0);
+                }
+            }
+            @keyframes dog-head {
+                from,
+                to {
+                    transform: rotate(45deg);
+                }
+                33.3% {
+                    transform: rotate(-45deg);
+                }
+                66.6% {
+                    transform: rotate(0);
+                }
+            }
+
+            .dog-torso {
+                top: -20%;
+                animation: dog-torso 200ms ease-in-out infinite alternate-reverse;
+            }
+            @-webkit-keyframes dog-torso {
+                from {
+                    transform: translateX(-5%);
+                }
+                to {
+                    transform: translateX(5%);
+                }
+            }
+            @keyframes dog-torso {
+                from {
+                    transform: translateX(-5%);
+                }
+                to {
+                    transform: translateX(5%);
+                }
+            }
+
+            .dog-eyes {
+                width: 60%;
+                top: 55%;
+                left: 20%;
+                z-index: 1;
+            }
+            .dog-eyes:before {
+                content: "";
+                display: block;
+                height: 40px;
+                width: 40px;
+                border-radius: 40px;
+                position: absolute;
+                background: orange;
+                top: -10px;
+                left: -10px;
+                z-index: 0;
+                border: 4px solid white;
+                border-left-width: 0;
+                border-bottom-width: 0;
+                border-top-width: 0;
+                transform: rotate(-45deg);
+            }
+
+            .dog-eye {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #000;
+                z-index: 1;
+                -webkit-animation: dog-eye 1800ms infinite;
+                animation: dog-eye 1800ms infinite;
+            }
+            @-webkit-keyframes dog-eye {
+                from,
+                to {
+                    -webkit-animation-timing-function: step-end;
+                    animation-timing-function: step-end;
+                    opacity: 1;
+                }
+                50%,
+                55% {
+                    -webkit-animation-timing-function: step-start;
+                    animation-timing-function: step-start;
+                    opacity: 0;
+                }
+            }
+            @keyframes dog-eye {
+                from,
+                to {
+                    -webkit-animation-timing-function: step-end;
+                    animation-timing-function: step-end;
+                    opacity: 1;
+                }
+                50%,
+                55% {
+                    -webkit-animation-timing-function: step-start;
+                    animation-timing-function: step-start;
+                    opacity: 0;
+                }
+            }
+            .dog-eye:first-child {
+                left: 0;
+            }
+            .dog-eye:last-child {
+                right: 0;
+            }
+
+            .dog-muzzle {
+                width: 60%;
+                left: 20%;
+                height: 50%;
+                border-bottom-left-radius: 100%;
+                border-bottom-right-radius: 100%;
+                background: white;
+                bottom: -15%;
+            }
+            .dog-muzzle:after,
+            .dog-muzzle:before {
+                content: "";
+                display: block;
+                position: absolute;
+            }
+            .dog-muzzle:before {
+                width: 6px;
+                height: 20px;
+                bottom: 0;
+                left: calc(50% - 3px);
+                background: #EAEBEC;
+            }
+            .dog-muzzle:after {
+                background: black;
+                width: 20px;
+                height: 15px;
+                bottom: 12px;
+                left: calc(50% - 10px);
+                border-bottom-left-radius: 60% 60%;
+                border-bottom-right-radius: 60% 60%;
+                border-top-left-radius: 50% 40%;
+                border-top-right-radius: 50% 40%;
+            }
+
+            .dog-tongue {
+                width: 40px;
+                height: 100%;
+                left: calc(50% - 20px);
+                z-index: -1;
+                transform-origin: center top;
+                -webkit-animation: dog-tongue 1800ms -50ms ease-in-out infinite;
+                animation: dog-tongue 1800ms -50ms ease-in-out infinite;
+            }
+            @-webkit-keyframes dog-tongue {
+                from,
+                to {
+                    transform: rotate(0);
+                }
+                16.6666666667% {
+                    transform: rotate(30deg);
+                }
+                33.3333333333%,
+                66.6666666667% {
+                    transform: rotate(0);
+                }
+                50%,
+                83.3333333333% {
+                    transform: rotate(-20deg);
+                }
+            }
+            @keyframes dog-tongue {
+                from,
+                to {
+                    transform: rotate(0);
+                }
+                16.6666666667% {
+                    transform: rotate(30deg);
+                }
+                33.3333333333%,
+                66.6666666667% {
+                    transform: rotate(0);
+                }
+                50%,
+                83.3333333333% {
+                    transform: rotate(-20deg);
+                }
+            }
+            .dog-tongue:before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: 40px;
+                background: #FD3163;
+                -webkit-animation: dog-tongue-inner 100ms ease-in-out infinite alternate;
+                animation: dog-tongue-inner 100ms ease-in-out infinite alternate;
+            }
+            @-webkit-keyframes dog-tongue-inner {
+                from {
+                    transform: translateY(5%);
+                }
+                to {
+                    transform: translateY(22%);
+                }
+            }
+            @keyframes dog-tongue-inner {
+                from {
+                    transform: translateY(5%);
+                }
+                to {
+                    transform: translateY(22%);
+                }
+            }
+
+            .dog-ears {
+                width: 40%;
+                top: 25%;
+                left: 30%;
+                -webkit-animation: dog-ears 1800ms 100ms ease infinite;
+                animation: dog-ears 1800ms 100ms ease infinite;
+            }
+            @-webkit-keyframes dog-ears {
+                42.3%,
+                71.6% {
+                    transform: rotate(-5deg);
+                }
+                50.3%,
+                79.6% {
+                    transform: rotate(5deg);
+                }
+                5% {
+                    transform: rotate(5deg);
+                }
+                12% {
+                    transform: rotate(-5%);
+                }
+                33.3%,
+                66%,
+                from,
+                to {
+                    transform: rotate(0);
+                }
+            }
+            @keyframes dog-ears {
+                42.3%,
+                71.6% {
+                    transform: rotate(-5deg);
+                }
+                50.3%,
+                79.6% {
+                    transform: rotate(5deg);
+                }
+                5% {
+                    transform: rotate(5deg);
+                }
+                12% {
+                    transform: rotate(-5%);
+                }
+                33.3%,
+                66%,
+                from,
+                to {
+                    transform: rotate(0);
+                }
+            }
+
+            .dog-ear {
+                bottom: -10px;
+                height: 50px;
+                width: 50px;
+                background: #EAEBEC;
+                -webkit-animation-duration: 400ms;
+                animation-duration: 400ms;
+                -webkit-animation-direction: alternate;
+                animation-direction: alternate;
+                -webkit-animation-timing-function: ease-in-out;
+                animation-timing-function: ease-in-out;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+                -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+            }
+            .dog-ear:first-child {
+                border-bottom-left-radius: 80%;
+                border-top-right-radius: 80%;
+                right: 100%;
+                box-shadow: inset -15px 15px 0 1px white;
+                transform-origin: right bottom;
+                transform: rotate(10deg);
+            }
+            .dog-ear:last-child {
+                border-top-left-radius: 80%;
+                border-bottom-right-radius: 80%;
+                left: 100%;
+                box-shadow: inset 15px 15px 0 0 white;
+                transform-origin: left bottom;
+                transform: rotate(-10deg);
+            }
+
+            .dog-tail {
+                width: 22px;
+                height: 24.2px;
+                background: white;
+                bottom: 40%;
+                border-radius: 11px;
+                left: calc(50% - 11px);
+                transform-origin: center bottom;
+            }
+            .dog-tail .dog-tail {
+                -webkit-animation: dog-tail-segment 200ms ease-in-out infinite alternate;
+                animation: dog-tail-segment 200ms ease-in-out infinite alternate;
+            }
+            @-webkit-keyframes dog-tail-segment {
+                from {
+                    transform: rotate(-10deg);
+                }
+                to {
+                    transform: rotate(10deg);
+                }
+            }
+            @keyframes dog-tail-segment {
+                from {
+                    transform: rotate(-10deg);
+                }
+                to {
+                    transform: rotate(10deg);
+                }
+            }
+
+            .dog-body > .dog-tail {
+                bottom: 90%;
+                -webkit-animation: dog-tail 200ms ease-in-out infinite alternate;
+                animation: dog-tail 200ms ease-in-out infinite alternate;
+            }
+            @-webkit-keyframes dog-tail {
+                from {
+                    transform: rotate(-45deg);
+                }
+                to {
+                    transform: rotate(45deg);
+                }
+            }
+            @keyframes dog-tail {
+                from {
+                    transform: rotate(-45deg);
+                }
+                to {
+                    transform: rotate(45deg);
+                }
+            }
+
+            .dog-body,
+            .dog-head,
+            .dog-torso {
+                border-radius: 50%;
+                background: white;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+            }
+
+            .dog-body,
+            .dog-torso {
+                box-shadow: inset 0 -15px 0 0 #EAEBEC;
+            }
+            @media(max-width:800px){
+                .dog{position: relative; margin: 30px 0 25px 0; left: 50%; transform: translate(-50%);}
+            }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <section id="main">
+            <div class="container">                
+                <div class="main_title">
+                    <strong>라인 CSS 수업</strong>
+                        <strong>김예진</strong>
+                </div>
+                <div class="main_desc">
+                    <div class="inner">
+                        <div class="dog-wrap">
+                            <div class="dog">
+                                <div class="dog-body">
+                                    <div class="dog-tail">
+                                        <div class="dog-tail">
+                                            <div class="dog-tail">
+                                                <div class="dog-tail">
+                                                    <div class="dog-tail">
+                                                        <div class="dog-tail">
+                                                            <div class="dog-tail">
+                                                                <div class="dog-tail"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dog-torso"></div>
+                                <div class="dog-head">
+                                    <div class="dog-ears">
+                                        <div class="dog-ear"></div>
+                                        <div class="dog-ear"></div>
+                                    </div>
+                                    <div class="dog-eyes">
+                                        <div class="dog-eye"></div>
+                                        <div class="dog-eye"></div>
+                                    </div>
+                                    <div class="dog-muzzle">
+                                        <div class="dog-tongue"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2>display:flex</h2>
+                        <h1>
+                            <em>디스플레이</em>
+                            <strong>플렉스</strong>
+                        </h1>
+                        <p>사이트의 레이아웃은 어떻게 작업할까요?</p>
+                    </div>
+                </div>
+            </div>            
+        </section><!--//main-->
+        <section id="about">
+            <div class="container">
+                <div class="sample">
+                    <div class="sample-title">
+                        <h3>학습 주제</h3>
+                      <p>Flexbox는 모던 웹을 위하여 제안된 기존 레이아웃보다 더 세련된 방식의 니즈를 부합하기 위한 CSS3의 새로운 레이아웃 방식입니다.
+                      </p> 
+                    </div>
+                    <div class="sample-table mt30">                        
+                        <table>
+                            <caption>플렉스의 속성과 설명을 나타내는 표입니다</caption>
+                            <colgroup>
+                                <col style="width:30%"/>
+                                <col style="width:70%"/>
+                               </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>속성</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>align-content</td>
+                                    <td>align-content 속성은 콘텐츠의 상하관계 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>align-items</td>
+                                    <td>align-items 속성은 콘텐츠 내부의 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>align-self</td>
+                                    <td>align-self 속성은 콘텐츠의 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>flex</td>
+                                    <td>flex 속성은 콘텐츠의 성질을 flex로 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-basis</td>
+                                    <td>flex-basis 속성은 요소의 기본 단위를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-direction</td>
+                                    <td>flex-direction 속성은 요소의 정렬 방향을 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-flow</td>
+                                    <td>flex-flow 속성은 요소의 정렬 방향과 줄 속성을 설정합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-grow</td>
+                                    <td>flex-grow 속성은 요소의 크기를 숫자를 통해 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-shrink</td>
+                                    <td>flex-shrink 속성은 요소의 크기를 숫자를 통해 줄여줍니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-wrap</td>
+                                    <td>flex-wrap 속성은 요소의 줄 속성을 설정합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>justify-content</td>
+                                    <td>justify-content 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>justify-items</td>
+                                    <td>justify-items 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>justify-self</td>
+                                    <td>justify-self 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>place-content</td>
+                                    <td>place-content 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>place-items</td>
+                                    <td>place-items 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>place-self</td>
+                                    <td>place-self 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>order</a></td>
+                                    <td>order 속성은 flex 콘텐츠의 순서를 정의합니다.</td>
+                                </tr>
+                            </tbody>                          
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section><!--//about-->
+        <section id="sample1"></section><!--//sample1-->
+        <section id="sample2"></section><!--//sample2-->
+    </div>
+</body>
+</html>

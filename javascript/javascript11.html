@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript</title>
+</head>
+<body>
+    <script>
+    let x = 100;   //변수 x에 숫자 100을 저장
+    let y = "100"; //변수 y에 문자 100을 저장 
+    let z = true;   
+        document.write(x,"<br>");
+        document.write(typeof x,"<br>");    //x의 성질(종류)
+        document.write(y,"<br>");     
+        document.write(typeof y,"<br>");     //y의 성질    
+        document.write(z,"<br>");
+        document.write(typeof z,"<br>");
+        
+        document.write("<br><br>");
+        
+        let a = 100;   //number
+        let b = "100";  //srting
+        document.write(typeof a,"<br>");
+        document.write(typeof b,"<br>");
+        
+        //형변환(srting -> number)
+        let c = Number(b);
+        document.write(typeof c,"<br>");
+        
+        //형변환(number -> srting)
+        let d = a = "" + a;
+        document.write(typeof d,"<br>");
+        
+        //형변환(number -> srting)
+        let e = String(a);
+        document.write(typeof e,"<br>");   
+    </script>
+</body>
+</html>

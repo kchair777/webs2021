@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    <script>
+        //함수
+        //선언적 함수
+        //익명 함수
+        //매개변수가 있는 함수
+        //리턴값이 있는 함수
+        function func1(){
+            document.write("func1이 실행되었습니다<br>")
+        } 
+        func1();
+
+        //화살표 함수(선언적 함수)
+        func2 = () => {
+            document.write("func2이 실행되었습니다<br>")
+            }
+            func2();
+
+            //화살표 함수(선언적 함수) - (중괄호 생략 가능)
+            func3 = () => document.write("func3이 실행되었습니다<br>");
+            func3();
+
+            const func4 = function(){
+                document.write("func4이 실행되었습니다<br>");
+            }
+            func4();
+
+            //익 -> 화  (const 생략 가능- 선언적함수(화살표)와 같아짐)
+            const func5 = () => {       
+                document.write("func5이 실행되었습니다<br>");
+            }
+            func5
+
+            const func6 = () => document.write("fun6이 실행되었습니다<br>");            
+            func6();
+
+            //리 -> 화
+            function func7(){
+                const str = "fun7이 실행되었습니다<br>";
+                return str;
+            }
+            document.write(func7())
+
+            func8 = () => {
+                const str = "fun8이 실행되었습니다<br>";
+                return str;
+            }
+            document.write(func8())
+
+            //매개
+            function func9(name){
+                document.write(name)
+            }
+            func9("fun9이 실행되었습니다<br>");
+
+            //매 -> 화
+            func10 = (name) => {
+                document.write(name)
+            }
+            func10("fun10이 실행되었습니다<br>")
+
+            //매 -> 익
+            const func11 = (name) => {
+                document.write(name)
+            }
+            func11("fun11이 실행되었습니다<br>")
+
+            //한줄로
+            func12 = (name) => document.write(name);
+            func12("fun12이 실행되었습니다<br>");
+
+            func13 = name => document.write(name);  //()생략 가능
+            func13("fun13이 실행되었습니다<br>");
+    </script>
+</body>
+</html>

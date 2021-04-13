@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout27</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        #wrap{
+            background: #fff;
+        }
+        .main{
+            background: #F1F3FF;
+        }
+        #header{
+            height: 80px;
+            background: #fff;
+        }
+        .container{
+            width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        .container .logo{
+            text-transform: uppercase;
+            font-weight: bold;
+            width: 18%;
+            float: left;
+        }
+        .container .nav{
+            width: 65%;
+            float: left;
+            text-align: center;
+        }
+        .container ul li{
+            display: inline;
+        }
+        .container .nav ul .ad{
+            color: #21D166;
+            font-weight: bold;
+        }
+        .container ul li a{
+            margin: 20px;
+            text-decoration: none;
+            color: #000;
+        }
+        .container .login{
+            width: 15%;
+            float: right;
+        }
+        .container .login a{
+            color: #000;
+            text-decoration: none;
+            border-radius: 20px;
+            border: 1px solid #000;
+            padding: 3px 10px;
+        }
+        #title{
+            height: 50px;
+            background: #F1F3FF;
+        }
+        #title .tit ul .ad{
+            color: #21D166;
+            font-weight: bold;
+        }
+        .tit{
+            padding-top: 14px;
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #title .tit{
+            height: 50px;
+            width: 1200px;
+        }
+        #title ul li{            
+            display: inline;                        
+        }
+        #title ul li a{
+            margin-left: 30px;
+            text-decoration: none;
+            color: #000;
+        }
+        #content1{
+            height: 500px;
+            background: #6179F8;
+            color: #fff;
+            text-align: center;
+        }
+        .cont1{
+            padding: 80px;
+        }
+        .cont1 h3{
+            font-weight: normal;
+            font-size: 15px;
+        }
+        .cont1 h1{
+            padding: 25px;
+            font-size: 32px;
+        }
+        .cont1 h2{
+            font-size: 20px;
+            font-weight: normal;
+        }
+        .cont1 h4{
+            padding: 30px;
+            font-size: 15px;
+        }
+        .cont1 h5{
+            font-size: 15px;
+            background: #fff;
+            color: rgb(47, 133, 233);
+            display: inline-block;
+            border-radius: 20px;
+            border: 1px solid #fff;
+            padding: 8px 15px;
+        }
+        #content2{   
+            overflow: hidden;
+            height: 500px;
+        }
+        .contai{
+            width: 1200px;
+            height: 500px;
+            margin: 0 auto;
+        }
+        .cont2{
+            width: 600px;
+            height: 500px;
+            float: left;
+        }
+        .cont2 img{
+            padding-top: 30px;
+        }
+        img{
+            width: 100%;
+        }
+        .cont3{
+            overflow: hidden;
+            width: 600px;
+            height: 500px;
+            float: left;
+        }
+        .cont3 em{
+            font-weight: bold;
+            position: relative;
+            font-style: normal;  
+            z-index: 1;
+        }
+        .cont3 .box1 em::before{
+            content: '';
+            width: 210px;
+            height: 10px;
+            background: #DBE0FD;
+            position: absolute;
+            left: 0;bottom: 0;
+            z-index: -1;
+        }
+        .cont3 .box2 em::before{
+            content: '';
+            width: 230px;
+            height: 10px;
+            background: #DBE0FD;
+            position: absolute;
+            left: 0;bottom: 0;
+            z-index: -1;
+        }
+        .cont3 .box3 em::before{
+            content: '';
+            width: 250px;
+            height: 10px;
+            background: #DBE0FD;
+            position: absolute;
+            left: 0;bottom: 0;
+            z-index: -1;
+        }
+        .cont3 h3{            
+            font-weight: normal;
+            float: left;
+            padding: 35px 35px;
+        }
+        .cont3 h4{
+            color: rgb(46, 139, 226);
+            float: left;
+            padding: 50px;
+        }
+        .box1 h4{
+            padding-left: 90px;
+        }
+        .box2 h4{
+            padding-left: 55px;
+        }
+        .box1{
+            
+            border-radius: 20px;
+            margin: 30px 13px;
+            width: 95%;
+            height: 25%;
+            background: #fff;
+        }
+        .box2{
+            
+            border-radius: 20px;
+            margin: 30px 13px;
+            width: 95%;
+            height: 25%;
+            background: #fff;
+        }
+        .box3{
+            
+            border-radius: 20px;
+            margin: 30px 13px;
+            width: 95%;
+            height: 25%;
+            background: #fff;
+        }
+
+        #footer{
+            height: 135px;
+            background: #444;
+        }
+        @media(max-width:420px){
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <main class="main">
+            <header id="header">
+                <div class="container">
+                    <div class="hea">
+                        <div class="logo">naver<br>influencer center</div>
+                    <div class="nav">
+                        <ul>
+                            <li><a href="#c">인플루언서 안내</a></li>
+                            <li><a href="#c">광고수익 혜택</a></li>
+                            <li><a href="#c" class="ad">성장 지원 프로그램</a></li>
+                            <li><a href="#c">브랜드커넥트</a></li>
+                            <li><a href="#c">공지</a></li>
+                        </ul>
+                    </div>                       
+                        <div class="login"><a href="#c">인플루언서 로그인</a></div>                
+                </div>
+                    </div>
+            </header>
+            <section id="title">
+                <div class="tit">
+                    <ul>
+                        <li><a href="#c">크리에이터 워크숍</a></li>
+                        <li><a href="#c">슈퍼애드</a></li>
+                        <li><a href="#c" class="ad">엑스피드 컨설팅</a></li>
+                        <li><a href="#c">멤버쉽 혜택</a></li>
+                        <li><a href="#c">어워드</a></li>
+                    </ul>
+                </div>  
+            </section>
+            <section id="content1">
+                <div class="cont1">
+                    <h3>엑스피드 컨설팅</h3>
+                    <h1>법률, 세무부터 동영상 제작까지!<br>
+                        지식iN 엑스퍼트 상담, 클래스 이용을 지원합니다.</h1>
+                        <h2>혼자서는 해결하기 어려웠던 문제들,<br>
+                            1인 최대 10만원의 엑스퍼트 쿠폰으로 전문가의 도움을 받아보세요.</h2>
+                            <h4>지급 조건 상세 보기</h4>
+                            <h5>내 eXpert 쿠폰 확인하기</h5>
+                </div>
+            </section>
+            <section id="content2">
+                <div class="contai">
+                    <div class="cont2">
+                        <img src="img/cont2_img.png" alt="">
+                    </div>
+                <div class="cont3">
+                    <div class="box1">
+                        <h3>이 이미지 쓰고 싶은데<br><em>저작권에 문제 없을까요?</em></h3>
+                        <h4>법률 상담 받기 ></h4>
+                    </div>
+                    <div class="box2">
+                        <h3><em>광고 수익에 대한 세금 신고</em><br>
+                            꼭 해야하나요? 어떻게 하죠?</h3>
+                        <h4>세무 상담 받기 ></h4>
+                    </div>
+                    <div class="box3">
+                        <h3>영상 콘텐츠 만들고 싶은데,<br>
+                            <em>동영상 제작을 배우고 싶어요!</em></h3>
+                        <h4>동영상 제작 상담 ></h4>
+                    </div>
+                </div>
+                </div>
+                
+            </section>
+            <footer id="footer"></footer>
+        </main>        
+    </div>
+</body>
+</html>

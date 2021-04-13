@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            width: 100%;
+        }
+        #wrap{
+            background: rgb(215, 237, 247);
+        }
+        .header{
+            height: 100px;
+            background: #fff;
+        }
+        .container{
+            padding-top: 40px;
+            overflow: hidden;
+            margin: 0 auto;
+            max-width: 1200px;
+            height: 100px;
+            background: #fff;
+        }
+        .ban{
+            position: relative;
+            height: 500px;
+            background: url(img/banner-bg2.png) no-repeat center center ;
+            background-size: cover;        
+        }        
+        .con1{
+            text-align: center;
+            padding: 70px 0;
+            margin: 0 auto;
+            width: 1130px;
+            height: 600px;       
+        }
+        .con2{
+            margin: 0 auto;
+            width: 1130px;
+            height: 600px;
+        }
+        .footer{
+            height: 235px;
+            background: #333;
+        }
+        .box1{
+            position: relative;
+            width: 80%;
+            height: 200px;
+            margin: 0 auto;
+        }
+        .box1 p{
+            font-size: 17px;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .box2{
+            color: #fff;
+            float: left;
+            width: 50%;
+            height: 400px;
+        }
+        .box2_1{
+            border-radius: 20px;
+            position: relative;
+            width: 98%;
+            height: 48%;
+            margin: 1%;
+            background-color: rgb(96, 170, 240);
+            background-size: 200px;
+        }
+        .box2 h4{
+            margin-left: 10px;
+            padding-top: 20px;
+            font-weight: normal;
+        }
+        .box2 p{
+            margin-left: 10px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .box2 a{
+            margin-left: 10px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 10px;
+        }
+        .box2_1 img{
+            position: absolute;
+            bottom: -47px;
+            right: -30px;
+            width: 250px;
+
+        }
+        .box2_2{
+            border-radius: 20px;
+            position: relative;
+            width: 98%;
+            height: 48%;
+            margin: 1%;
+            background-color: rgb(96, 170, 240);
+        }
+        .box2_2 h4{
+            padding-top: 20px;
+            font-weight: normal;
+        }
+        .box2_2 p{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .box2_2 a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 10px;
+        }
+        .box2_2 img{
+            position: absolute;
+            bottom: 14px;
+            right: 18px;
+            width: 200px;
+        }
+        .box3{
+            position: relative;
+            border-radius: 20px;
+            color: #fff;
+            float: left;
+            width: 50%;
+            height: 400px;
+            background-color: rgb(96, 170, 240);
+
+        }
+        .box3 h4{
+            margin-left: 10px;
+            padding-top: 20px;
+            font-weight: normal;
+        }
+        .box3 p{
+            margin-left: 10px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .box3 a{
+            margin-left: 10px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 10px;
+        }
+        .box3 img{
+            
+            position: absolute;
+            bottom: 0;            
+            width: 400px;
+        }
+
+        .container .logo{
+            width: 20%;
+            float: left;
+        }
+        .container .nav{ 
+            width: 60%;
+            float: left;
+            text-align: center;
+        }
+        .container .nav li{
+            display: inline;
+        }
+        .container .nav li a{
+            text-decoration: none;
+            color: black;
+            margin: 10px;
+        }
+        .container .login{
+            text-align: right;
+            width: 20%;
+            float: right;
+        }
+        .container .login a{
+            text-decoration: none;
+            color: black;
+            border: 1px solid #000;
+            border-radius: 20px;
+            padding: 5px;
+        }
+        .ban_tit{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            color: #fff;            
+        }        
+        .ban h1{
+            margin-bottom: 20px;
+            font-size: 12px;
+        }        
+        .hea_tit .btn{
+            float: right;
+        }
+        .hea_tit .btn a{
+            text-decoration: none;
+            color: black;
+            border: 1px solid #000;
+            border-radius: 30px;
+            padding: 5px;            
+        }
+        .con1 span{
+            background: rgb(201, 199, 199);
+            padding-bottom: 10px;
+            display: inline-block;
+            border-radius: 30px;
+            padding: 6px;
+            padding-top: 2px;
+        }
+        .con1 h3{
+            font-size: 30px;
+            padding: 10px 200px;
+        }
+        .con1 figure{
+            padding: 100px;
+            padding-top: 5px;
+        }
+         
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="container">
+                <div class="hea">
+                    <div class="logo">로고 이미지</div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="#c">인플루언서 안내</a></li>
+                        <li><a href="#c">광고수익 혜택</a></li>
+                        <li><a href="#c">성장 지원 프로그램</a></li>
+                        <li><a href="#c">브랜드커넥트</a></li>
+                        <li><a href="#c">공지</a></li>
+                    </ul>
+                </div>                       
+                    <div class="login"><a href="#c">인플루언서 로그인</a></div>                
+            </div>
+                </div>                
+        </header>
+        <section class="ban">
+            <div class="ban_tit">
+                <h1>광고수익 혜택</h1>
+            <h2>인플루언서의 수익을 더 높여줄<br>
+                특별한 광고가 제공됩니다.</h2>
+            </div>            
+        </section>
+        <section class="content">
+            <div class="contai">
+                <article class="con1">
+                    <span>new</span>
+                    <h3>더 커진 수익과 효과적인 노출<br>
+                        새롭고 강력한 헤드뷰 광고를 선보입니다.</h3> 
+                        <figure>
+                            <img src="img/content-img1.png" alt="컨텐츠이미지">
+                        </figure>  
+                </article>
+            </div>            
+            <article class="con2">
+                <div class="box1">
+                    <p>새로운 헤드뷰 광고 상품은 콘텐츠에 방해되지
+                        않으면서도<br>뛰어난 노출과 수익을 제공하는
+                        신규 광고입니다.<br>네이버에서 적극적인 창작 활동을
+                        통해 더 좋아진 혜택을 경험해 보세요.</p> 
+                </div>
+                    <div class="box2">
+                            <div class="box2_1">
+                                <h4>인플루언서 대상</h4>
+                                <p>인플루언서 홈 영역에<br>일반 광고 제공</p>
+                                <a href="#c">자세히 알아보기</a>
+                                <img src="img/cont2-img2.png" alt="a">
+                            </div>
+                            <div class="box2_2">
+                                <h4>상위 인플루언서 대상</h4>
+                                <p>더 높은 수익의<br>프리미엄 광고 제공</p>
+                                <a href="#c">자세히 알아보기</a>
+                                <img src="img/cont2-img1.png" alt="a">
+                            </div>
+                            </div>              
+                    
+                    <div class="box3">
+                        <h4>우수 인플루언서 대상</h4>
+                                <p>다양한 브랜드와 연결될 수 있는<br>브랜드 커넥트 제공</p>
+                                <a href="#c">자세히 알아보기</a>
+                                <img src="img/cont2-img3.png" alt="#">
+                    </div>
+            </article>
+        </section>
+            
+        <footer class="footer"></footer>
+    </div>
+</body>
+</html>

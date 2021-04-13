@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu Effect01 - javascript</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        @font-face {
+            font-family: 'Cafe24Dangdanghae';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.2/Cafe24Dangdanghae.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'BMHANNAAir';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/BMHANNAAir.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        :root {
+            font-size: 16px;
+        }
+
+        /*@media (max-width:1200px){
+            font-size: 14px;     화면 1200px줄어들때 폰트도 줄어듬
+        }*/
+
+        body {
+            background: url(img/img_h06.png)no-repeat center center;
+            background-size: cover;
+            background-color: rgb(149, 187, 236);
+            background-blend-mode: multiply;
+            /*배경 색 합쳐주기*/
+            height: 100vh;
+            font-size: 16px;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+        }
+
+        /*.info*/
+        .info {
+            position: absolute;
+            color: #fff;
+            font-family: 'BMHANNAAir';
+        }
+
+        .info.left {
+            left: 20px;
+            top: 20px;
+        }
+
+        .info.right {
+            right: 20px;
+            top: 20px;
+        }
+
+        .info.bottom {
+            left: 20px;
+            bottom: 20px;
+        }
+
+        .info ul {}
+
+        .info li {
+            font-size: 1rem;
+            /*루트 기본 16px(1rem)*/
+            line-height: 1.4;
+        }
+
+        .info li a {
+            text-decoration: none;
+            color: #fff;
+            border: 1px dashed #fff;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            display: inline-block;
+            font-size: 0.8rem;
+            margin: 3px;
+        }
+
+        .info li a.active {
+            background: #fff;
+            color: #000;
+        }
+
+        /*option*/
+        @font-face {
+            font-family: 'S-CoreDream-3Light';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'S-CoreDream-3Light';
+        }
+
+        #tab-menu {
+            max-width: 600px;
+            background: #eaa111;
+            position: absolute;
+            left: 50%;
+            top: 20vh;
+            transform: translate(-50%);
+            border-radius: 5px;
+        }
+
+        #tab-btn ul {
+            display: flex;
+        }
+
+        #tab-btn li {
+            flex-basis: 20%;
+            text-align: center;
+            list-style: none;
+        }
+
+        #tab-btn li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 1.5em 1.5em 1em 1.5em;
+            display: block;
+        }
+
+        #tab-btn li.active a {
+            border-bottom: 3px solid #2b110e;
+            color: #2b110e;
+        }
+
+        #tab-cont {
+            background: #fff;
+            padding: 1.5em;
+            border-radius: 0 0 5px 5px;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        #tab-cont>div {
+            display: none;
+        }
+
+        #tab-cont>div:nth-child(1) {
+            display: block;
+        }
+
+        @media (max-width:600px) {
+            body {
+                font-size: 12px;
+            }
+
+            #tab-cont {
+                font-size: 12px;
+            }
+
+            .info.right {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="info left">
+        <h1>Tab Menu Effect01 - javascript</h1>
+        <p>탭 메뉴 이펙트</p>
+    </div>
+    <nav class="info right">
+        <ul>
+            <li><a href="menuEffect01-jquery.html">1</a><a class="active" href="menuEffect01-javascript.html">1</a></li>
+            <li><a href="menuEffect02-jquery.html">2</a><a href="menuEffect02-javascript.html">2</a></li>
+            <li><a href="menuEffect03-jquery.html">3</a><a href="menuEffect03-javascript.html">3</a></li>
+            <li><a href="menuEffect04-jquery.html">4</a><a href="menuEffect04-javascript.html">4</a></li>
+            <li><a href="menuEffect05-jquery.html">5</a><a href="menuEffect05-javascript.html">5</a></li>
+            <li><a href="menuEffect06-jquery.html">6</a><a href="menuEffect06-javascript.html">6</a></li>
+            <li><a href="menuEffect07-jquery.html">7</a><a href="menuEffect07-javascript.html">7</a></li>
+            <li><a href="menuEffect08-jquery.html">8</a><a href="menuEffect08-javascript.html">8</a></li>
+            <li><a href="menuEffect09-jquery.html">9</a><a href="menuEffect09-javascript.html">9</a></li>
+            <li><a href="menuEffect10-jquery.html">10</a><a href="menuEffect10-javascript.html">10</a></li>
+        </ul>
+    </nav>
+
+    <!--contents-->
+    <section class="contents">
+        <div id="tab-menu">
+            <div id="tab-btn">
+                <ul>
+                    <li class="active"><a href="#">tab1</a></li>
+                    <li><a href="#">tab2</a></li>
+                    <li><a href="#">tab3</a></li>
+                    <li><a href="#">tab4</a></li>
+                    <li><a href="#">tab5</a></li>
+                </ul>
+            </div>
+            <div id="tab-cont">
+                <div>1.빛의 굴절 방향을 조절하거나 흡수해 모습을 감출 수 있는 투명망토를 실현케해줄 새로운 메타물질이 국내연구진에 의해 개발됐다.</div>
+                <div>2. 이 메타물질은 음파탐지기로도 추적할 수 없는 스텔스 잠수함을 만들거나, 지진을 회피하는데 활용될 수 있다.</div>
+                <div>3. 포항공과대학교(포스텍) 기계공학과·화학공학과 노준석 교수 연구팀은 빛뿐만 아니라 소리 영역까지 제어할 수 있는 메타물질을 개발했다고 29일 밝혔다. 연구팀은 물속에서 음향
+                    굴절률을 조절해 파동을 흡수하거나 통과시킴으로써 음파탐지기에도 잡히지 않는 ‘수중 스텔스 메타표면’을 제안했다.</div>
+                <div>4. 뿐만 아니라 진동과 같은 판에서의 파동 흐름을 극단적으로 바꿀 수 있는 것을 확인했다. 특히 실현 불가능케 여겨져왔던 무한한 굴절률인 특이점이 존재하는 클로킹 현상을 실제로
+                    구현할 수 있는 방법론을 제시했다.</div>
+                <div>5. 자연에서 빛이 어떤 물질을 만났을 때, 일반적으로 양(+)의 방향으로 굴절되는 성질이 있다. 메타물질은 이런 빛의 굴절 특성을 음(-)의 방향, 완전 투과를 일으키는 제로
+                    굴절률(0) 또는 완전 흡수체를 설계할 수 있다. 이 때문에 메타물질을 만나면 투명하게 보이는 것이다.</div>
+            </div>
+        </div>
+    </section>
+    <!--//contents-->
+
+    <!--script-->
+
+    <script>
+        const tabBtn = document.querySelectorAll("#tab-btn > ul > li");
+        //tabBtn.style.color = "red";  //tabBtn.css("color","red");
+        const tabCont = document.querySelectorAll("#tab-cont > div");
+
+        tabBtn.forEach((elem, index) => {
+            elem.addEventListener("click", function () {
+
+                tabBtn.forEach((el) => {
+                    el.classList.remove("active");
+                });
+                elem.classList.add("active");
+                tabCont.forEach(el => {
+                    el.style.display = "none"
+                })
+                tabCont[index].style.display = "block";
+            });
+        }) //tab 버튼 다 적용하기
+    </script>
+
+</body>
+
+</html>

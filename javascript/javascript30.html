@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script>
+            //for문을 이용해 1~10 출력
+
+            for (let i = 1; i <= 10; i++) {
+                document.write(i, "<br>")
+            }
+
+            document.write("<br>")
+
+            for (let x = 1; x <= 10; x++) {
+                for (let j = 1; j <= 10; j++) {
+                    document.write(x, j, "<br>")
+                }
+            }
+
+            //1,1 / 1,2 / 1,3 ..... 
+            
+            
+            //구구단
+
+            /*i = 2~9
+         j = 1~9
+         i * j = sum
+
+         2 * 1 = 2
+         2 * 2 = 4
+         3 * 1 = 3
+         ......*/
+
+            for (let i = 2; i <= 9; i++) {
+                for (let j = 1; j <= 9; j++) {
+                    let sum = i * j;
+                    document.write(i + "*" + j + "=" + sum);
+                    document.write("<br>")
+                }
+            }
+        </script>
+    </body>
+</html>
