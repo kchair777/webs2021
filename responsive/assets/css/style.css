@@ -272,6 +272,22 @@ body{
 .column.col2{}
 .column.col3{
     border-bottom: 0;
+    position: relative;
+}
+.column.col3 a{
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.column.col3 a.more{
+    position: absolute;
+    right: 50px;
+}
+.column.col3 li{
+    overflow: hidden;
+    background: url(../img/)no-repeat 0 8px;
+    padding-left: 8px;
 }
 .column.col4{}
 .column.col5{}
@@ -386,8 +402,43 @@ body{
       width: 19%;
       margin: 0.5%;
   }
-  
-
+  /*video*/
+  .video{
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+  }
+  .video iframe{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+  }
+  .footer{
+      padding: 30px 0;
+      text-align: center;
+      
+  }
+ .footer ul li{
+     display: inline;
+     position: relative;
+ }
+ .footer li::before{
+     content: '';
+     width: 1px;
+     height: 12px;
+     position: absolute;
+     background: rgb(197, 195, 195);
+     top: 1px;
+ }
+ .footer li:first-child:before{
+     width: 0;
+ }
+ .footer ul li a{
+     margin: 20px;
+ }
+ address{
+     padding: 20px;
+ }
 /* 미디어 쿼리 */
 @media (max-width: 1220px) {
     .container {
@@ -436,6 +487,9 @@ body{
         width: 100%;
         border-top: 1px solid #dbdbdb;
     }    
+    #cont_rigth .column{float: left;width: 33.3333%;box-sizing: border-box;}
+    #cont_rigth .column.col7{border-bottom: 0;border-right: 1px solid #dbdbdb;}
+    #cont_rigth .column.col8{border-bottom: 0;border-right: 1px solid #dbdbdb;}
 }
 @media (max-width:768px){
     #cont_left{
@@ -500,5 +554,9 @@ body{
     }
     .lightbox  > div:last-child{
         display: none;
-    }   
+    }  
+    #cont_rigth .column.col7{width: 50%;}
+    #cont_rigth .column.col8{width: 50%;border-right: none;}
+    #cont_rigth .column.col9{display: none;}
+    
 }

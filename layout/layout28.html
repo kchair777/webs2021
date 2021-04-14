@@ -9,48 +9,49 @@
         *{
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
         #wrap{
             background: #fff;
         }
+        
         #header{
             height: 100px;
         }
         .container{
-            position: relative;
+            padding-top: 35px;
             text-align: center;
-            width: 1300px;
+            width: 1200px;
+            height: 100px;
             margin: 0 auto;
         }
         .logo{
             font-weight: bold;
             text-transform: uppercase;
-            padding-top: 25px;
+            margin-top: -5px;
             text-align: left;
             width: 15%;
             float: left;
         }
         .nav{
-            padding-top: 40px;
             width: 70%;
             float: left;
         }
-        .nav ul li{            
+        .nav ul li{ 
+            margin-top: 5px;           
             display: inline-block;
         }
         .nav ul li a{
+            
             margin: 20px;
             text-decoration: none;
             color: #000;
         }
         .login{
-            padding-bottom: 30px;
+            float: left;
             border: 1px solid rgb(129, 129, 129);
             border-radius: 20px;
-            width: 12%;
-            position: absolute;
-            top: 35px;
-            right: 0;
+            width: 15%;
             padding: 4px 3px 4px 4px;
         }
         .login a{
@@ -59,7 +60,6 @@
             text-decoration: none;
         }
         #title{
-            position: relative;
             height: 400px;
             background: url(https://ncreatorsnext.pstatic.net/img/membership_cover_t@3x.1a3b4c431bef3c3c1d8584d14ad789a5.jpg)no-repeat ;
             background-size: cover;
@@ -91,7 +91,6 @@
             margin-top: 5%;
             float: left;
             width: 50%;
-            height: 50%;
         }
         .conte1 .cont1 h1{            
             padding-bottom: 25px;
@@ -99,7 +98,7 @@
         }
         .conte1 .cont1 p{
             padding: 10px 0;
-            color: #555;
+            color: #888;
             font-size: 17px;
         }
         .conte1 .cont1 h2{
@@ -112,13 +111,15 @@
             font-size: 17px;
         }
         .conte1 .cont2{
-            margin-top: 5%;
-            overflow: hidden;
-            border-radius: 20px;
-            float: left;
             width: 50%;
-            height: 50%;
-            background: #666;
+            float: left;
+        }
+        .conte1 .cont2_img{
+            width: 100%;
+            height: 290px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 50px;
         }
         .cont2 img{
             width: 100%;
@@ -155,28 +156,32 @@
             height: 200px;
             background: #666;
         }
-        .clearfix{
-            content: '';
-            display: block;
-            clear: both;
-        }
-        @media(max-width:400px){
+        
+        @media(max-width:1220px){
             .container{width: 100%;}
-            .logo{width: 100%;text-align: center;}
+        }        
+        @media(max-width:600px){
+            .logo{width: 78%;text-align: center;padding-left: 90px;}
             .nav{display: none;}
-            .login{border: none; width: 15%;top: 25px;line-height: 1;}
+            .login{border: none; width: 22%;top: 25px;line-height: 1;}
             .login a{font-size: 11px;}
             #title h3{font-size: 12px;}
             #title h1{font-size: 24px;}
             #title p{font-size: 14px;}
-            .conte1{width: 100%;}
-
+            .conte1{width: 100%; height: 900px;}
+            .conte1 .cont1{width: 100%;  text-align: center;padding-top: 20px;}
+            .conte1 .cont1 h1{font-size: 26px;}
+            .conte1 .cont1 p{font-size: 13px;}
+            .conte1 .cont1 h2{font-size: 13px;}
+            .conte1 .cont2{width: 100%;}
+            .conte1 .cont2_img{width: 60%; height: 200px; margin: 0 auto;margin-top: 30px;}
+            .conte1 .cont3 {font-size: 12px; width: 60%; margin-left: 110px;}
+            .conte1 .cont3 strong{font-size: 15px;}
         }
     </style>
 </head>
 <body>
     <div id="wrap">
-        <main class="clearfix">
             <header id="header">
                 <div class="container">
                     <div class="logo">naver<br>influencer center</div>
@@ -213,12 +218,14 @@
                         <h2>온라인 네임카드 만들기</h2>       
                     </div>
                     <div class="cont2">
-                        <img src="https://ncreatorsnext.pstatic.net/img/namecard_t@3x.4c6c1a03edf11d65f49fd2439c3c0010.png" alt="이미지">
+                        <div class="cont2_img">
+                            <img src="https://ncreatorsnext.pstatic.net/img/namecard_t@3x.4c6c1a03edf11d65f49fd2439c3c0010.png" alt="이미지">
+                        </div>                        
                     </div>
                     <div class="cont3">
-                        <p><strong>신청 자격     </strong>
+                        <p><strong>신청 자격</strong>
                             홈을 개설한 네이버 인플루언서라면 누구나</p>
-                        <p><strong>혜택 상세     </strong>
+                        <p><strong>혜택 상세</strong>
                             운영중인 다른 채널에 내 인플루언서 홈을 홍보할 수 있는 네임카드 이미지 소스를 제공합니다.</p>
                     </div>
                 </div>            
@@ -226,7 +233,7 @@
             <section id="contents2"></section>
             <section id="contents3"></section>
             <footer id="footer"></footer>
-        </main>
+
         
     </div>
 </body>
