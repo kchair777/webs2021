@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            background: #fff;
+        }
+        #header{
+            height: 100px;
+        }
+        .container{
+            position: relative;
+            text-align: center;
+            width: 1300px;
+            margin: 0 auto;
+        }
+        .logo{
+            font-weight: bold;
+            text-transform: uppercase;
+            padding-top: 25px;
+            text-align: left;
+            width: 15%;
+            float: left;
+        }
+        .nav{
+            padding-top: 40px;
+            width: 70%;
+            float: left;
+        }
+        .nav ul li{            
+            display: inline-block;
+        }
+        .nav ul li a{
+            margin: 20px;
+            text-decoration: none;
+            color: #000;
+        }
+        .login{
+            padding-bottom: 30px;
+            border: 1px solid rgb(129, 129, 129);
+            border-radius: 20px;
+            width: 12%;
+            position: absolute;
+            top: 35px;
+            right: 0;
+            padding: 4px 3px 4px 4px;
+        }
+        .login a{
+            font-size: 14px;
+            color: #000;
+            text-decoration: none;
+        }
+        #title{
+            position: relative;
+            height: 400px;
+            background: url(https://ncreatorsnext.pstatic.net/img/membership_cover_t@3x.1a3b4c431bef3c3c1d8584d14ad789a5.jpg)no-repeat ;
+            background-size: cover;
+            text-align: center;
+        }
+        #title h3{            
+            padding-top: 70px;
+            font-size: 16px;
+            color: #fff;
+        }
+        #title h1{
+            padding: 30px;
+            font-size: 33px;
+            color: #fff;
+        }
+        #title p{
+            line-height: 1.7;
+            color: #fff;
+        }
+        #contents1{
+            background: #F0FAF7;
+        }
+        .conte1{
+            width: 1000px;
+            height: 600px;
+            margin: 0 auto;
+        }
+        .conte1 .cont1{
+            margin-top: 5%;
+            float: left;
+            width: 50%;
+            height: 50%;
+        }
+        .conte1 .cont1 h1{            
+            padding-bottom: 25px;
+            font-size: 35px;
+        }
+        .conte1 .cont1 p{
+            padding: 10px 0;
+            color: #555;
+            font-size: 17px;
+        }
+        .conte1 .cont1 h2{
+            margin-top: 30px;
+            padding: 15px 45px;
+            color: #fff;
+            display: inline-block;
+            border-radius: 30px;
+            background: #0CD796;
+            font-size: 17px;
+        }
+        .conte1 .cont2{
+            margin-top: 5%;
+            overflow: hidden;
+            border-radius: 20px;
+            float: left;
+            width: 50%;
+            height: 50%;
+            background: #666;
+        }
+        .cont2 img{
+            width: 100%;
+        }
+        .conte1 .cont3{
+            margin-top: 40px;
+            border-radius: 10px;
+            float: left;
+            width: 100%;
+            height: 25%;
+            background: #fff;
+        }
+        .conte1 .cont3 p{
+            color: #777;
+        }
+        .conte1 .cont3 p:nth-child(1){
+            margin-top: 4%;
+            margin-bottom: 20px;
+        }       
+        .conte1 .cont3 strong{
+            margin: 0 20px 0 40px;
+            font-size: 17px;
+            color: #5ECA8F;
+        }        
+        #contents2{
+            height: 600px;
+            background: #333;
+        }
+        #contents3{
+            height: 600px;
+            background: #888;
+        }
+        #footer{
+            height: 200px;
+            background: #666;
+        }
+        .clearfix{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        @media(max-width:400px){
+            .container{width: 100%;}
+            .logo{width: 100%;text-align: center;}
+            .nav{display: none;}
+            .login{border: none; width: 15%;top: 25px;line-height: 1;}
+            .login a{font-size: 11px;}
+            #title h3{font-size: 12px;}
+            #title h1{font-size: 24px;}
+            #title p{font-size: 14px;}
+            .conte1{width: 100%;}
+
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <main class="clearfix">
+            <header id="header">
+                <div class="container">
+                    <div class="logo">naver<br>influencer center</div>
+                        <div class="nav">
+                            <ul>
+                                <li><a href="#c">인플루언서 안내</a></li>
+                                <li><a href="#c">광고수익 혜택</a></li>
+                                <li><a href="#c">성장 지원 프로그램</a></li>
+                                <li><a href="#c">브랜드커넥트</a></li>
+                                <li><a href="#c">공지</a></li>
+                            </ul>
+                        </div>                       
+                            <div class="login"><a href="#c">인플루언서 로그인</a></div>
+                </div>
+            </header>
+            <section id="title">
+                <h3>멤버십 혜택</h3>
+                <h1>인플루언서 활동에 꼭 필요한<br>
+                    네이버의 다양한 멤버십 혜택을 제공합니다.</h1>
+                <p>전국 파트너스퀘어의 스튜디오, 편집실 이용부터<br>
+                    네이버플러스 멤버십 이용권 1년 무료 혜택까지.<br>
+                    네이버 인플루언서라면 네이버의 다양한<br>
+                    멤버십 혜택들을 누릴 수 있습니다.</p>
+            </section>
+            <section id="contents1">
+                <div class="conte1">
+                    <div class="cont1">
+                        <h1>어디에서든 나를 빛내줄<br>
+                            온라인 네임카드</h1>
+                        <p>네이버 인플루언서라면 누구나 나만의
+                            네임카드 다운받고<br>홈을 알릴 수 있습니다.
+                            나를 더 예쁘고 멋지게 소개할 수<br>있도록
+                            온라인 네임카드를 만들어보세요.</p> 
+                        <h2>온라인 네임카드 만들기</h2>       
+                    </div>
+                    <div class="cont2">
+                        <img src="https://ncreatorsnext.pstatic.net/img/namecard_t@3x.4c6c1a03edf11d65f49fd2439c3c0010.png" alt="이미지">
+                    </div>
+                    <div class="cont3">
+                        <p><strong>신청 자격     </strong>
+                            홈을 개설한 네이버 인플루언서라면 누구나</p>
+                        <p><strong>혜택 상세     </strong>
+                            운영중인 다른 채널에 내 인플루언서 홈을 홍보할 수 있는 네임카드 이미지 소스를 제공합니다.</p>
+                    </div>
+                </div>            
+            </section>
+            <section id="contents2"></section>
+            <section id="contents3"></section>
+            <footer id="footer"></footer>
+        </main>
+        
+    </div>
+</body>
+</html>

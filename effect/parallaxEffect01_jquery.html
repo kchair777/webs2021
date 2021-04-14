@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parallax Effect</title>
+    <style>
+        @font-face {
+        font-family: 'Cafe24Oneprettynight';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+        @font-face {
+        font-family: 'Chosunilbo_myungjo';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+        @font-face {
+        font-family: 'KCC-eunyoung';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KCC-eunyoung-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        *::before,*::after{box-sizing: border-box;}
+        body{
+            font-family: 'Cafe24Oneprettynight'; 
+        }
+        #contents{
+            font-family: 'KCC-eunyoung';
+        }
+        #contents > section{
+            text-align: center;
+            height: 100vh;
+            color: #fff;
+            display: flex; 
+            align-items: center;
+            justify-content: center; /*가운데로*/
+        }
+        #contents > section h2{
+            font-size: 3rem;
+            padding: 0 10vw;
+        }
+        #contents > section h2 strong{
+            display: block;            
+            font-size: 1rem;
+            padding-top: 1em;            
+            font-weight: normal;
+        }
+        #section1 {background:radial-gradient(ellipse farthest-corner at center top, #F39264 0%, #F2606F 100%); }
+        #section2 {background:radial-gradient(ellipse farthest-corner at center top, #CBF49A, #1EA623);}
+        #section3 {background:radial-gradient(ellipse farthest-corner at center top, #FFEE75, #FF8930);}
+        #section4 {background:radial-gradient(ellipse farthest-corner at center bottom, #6BEACE, #2E9AA4);}
+        #section5 {background:radial-gradient(ellipse farthest-corner at center bottom, #69D2FB 0%, #20438E 100%);}
+        #section6 {background:radial-gradient(ellipse farthest-corner at center top, #6CEBCF 0%, #38A7AA 100%);}
+        
+        #header{
+            position: fixed;  
+            left: 0;top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.3);
+            display: flex;
+            justify-content: space-between;
+        }
+        #header h1{
+            color: #fff;
+            padding: 1rem;
+        }
+        #header nav{}
+        #header nav li{
+            display: inline;
+            list-style: none;
+        }
+        #header nav li a{
+            padding: 30px 15px;
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+        }
+        .info{
+            position: fixed;
+            left: 20px; bottom: 20px;
+            background: rgba(255,255,255,.3);
+            padding: 1em;
+        }
+        .info li{
+            list-style: none;
+        }
+        
+        @media(max-width:800px){
+            :root{font-size: 12px;}
+        }      
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>yejin</h1>
+        <nav>
+            <ul>
+                <li><a href="#section1">Menu1</a></li>
+                <li><a href="#section2">Menu2</a></li>
+                <li><a href="#section3">Menu3</a></li>
+                <li><a href="#section4">Menu4</a></li>
+                <li><a href="#section5">Menu5</a></li>
+                <li><a href="#section6">Menu6</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contents">
+        <section id="section1">
+            <h2>아모르파티(Amor fati)<strong>자신의 삶에서 발생하는 모든 것이 운명이며 그 운명을 받아들이고 그것을 사랑하라</strong></h2>
+        </section><!--section1-->
+        <section id="section2">
+            <h2>당신이 치즈가 아닌 이상 당신의 나이는 중요치 않다           
+            <strong> - 루이스 부뉴엘 -
+                </strong></h2>
+        </section><!--section2-->
+        <section id="section3">
+            <h2>꿈에 사로잡혀 살다가 진짜 삶을 놓쳐선 안돼<strong>- 영화 해리포터 중 덤블도어 -</strong></h2></section><!--section3-->
+        <section id="section4">
+            <h2>생각이 서로 다른 건 좋다 하지만 내가 틀린 건 아니다 <strong>- 폴 토마스 앤더슨 -</strong></h2>
+        </section><!--section4-->
+        <section id="section5">
+            <h2>영화란 지루한 부분이 커트된 인생이다<strong>- 알프레드 히치콕 -</strong></h2>
+        </section><!--section5-->
+        <section id="section6">
+            <h2>아침에 당신을 벌떡 깨울 꿈을 가져야만 한다<strong>- 빌리 와일더 -</strong></h2> 
+            </section><!--section6-->
+    </main>
+    <aside class="info">
+        <div>scrolltop : <span class="scrollTop">0</span>px</div>
+        <ul>
+            <li>#section1 offset().top : <span class="s1">0</span>px</li>
+            <li>#section2 offset().top : <span class="s2">0</span>px</li>
+            <li>#section3 offset().top : <span class="s3">0</span>px</li>
+            <li>#section4 offset().top : <span class="s4">0</span>px</li>
+            <li>#section5 offset().top : <span class="s5">0</span>px</li>
+            <li>#section6 offset().top : <span class="s6">0</span>px</li>
+        </ul>
+    </aside>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+
+        //$(".info .s1").text(parseInt($("#section1").offset().top))
+        //$(".info .s2").text(parseInt($("#section2").offset().top))
+        //$(".info .s3").text(parseInt($("#section3").offset().top))
+        //$(".info .s4").text(parseInt($("#section4").offset().top))
+        //$(".info .s5").text(parseInt($("#section5").offset().top))
+        //$(".info .s6").text(parseInt($("#section6").offset().top))
+ 
+        for(let i = 1; i <= 6; i++){
+            $(".info .s"+i).text(parseInt($("#section"+i).offset().top))
+        }
+
+        $(window).scroll(function(){
+            let scroll = parseInt($(window).scrollTop());
+            $(".scrollTop").text(scroll);             
+        });
+
+        /*$("nav ul li").eq(0).click(function(){
+            $("html, body").animate({scrollTop:$("#section1").offset().top},600)
+        });
+        $("nav ul li").eq(1).click(function(){
+            $("html, body").animate({scrollTop:$("#section2").offset().top},600)
+        });
+        $("nav ul li").eq(2).click(function(){
+            $("html, body").animate({scrollTop:$("#section3").offset().top},600)
+        });
+        $("nav ul li").eq(3).click(function(){
+            $("html, body").animate({scrollTop:$("#section4").offset().top},600)
+        });
+        $("nav ul li").eq(4).click(function(){
+            $("html, body").animate({scrollTop:$("#section5").offset().top},600)
+        });
+        $("nav ul li").eq(5).click(function(){
+            $("html, body").animate({scrollTop:$("#section6").offset().top},600)
+        });*/
+
+        //첫 번째 버튼을 클릭하면 첫 번쨰 섹션의 오프셋 값을 입력
+
+        $("nav ul li").click(function(e){
+            e.preventDefault();
+            let target = $(this);
+            let index = target.index()
+            let section = $("#contents > section").eq(index);
+            let offset = section.offset().top;
+            $("html, body").animate({scrollTop:offset},600);
+        });
+
+        
+        
+    </script>
+</body>
+</html>
