@@ -22,8 +22,8 @@ tr,
 td,
 textarea,
 button,
-form
-figcaption
+form,
+figcaption,
 figure {
     margin: 0;
     padding: 0;
