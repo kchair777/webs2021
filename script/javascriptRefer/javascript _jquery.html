@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeneEffect01-jQuery </title>
+    <link rel="stylesheet" href="prism.css">
+    <style>
+        @font-face {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #wrap {
+            margin: 3vh;
+            border: 8px solid #0E43F1;
+            border-radius: 20px;
+        }
+
+        #contents {
+            border: 8px solid #50B5F9;
+            height: 100%;
+            border-radius: 12px;
+            font-family: 'TmonMonsori';
+            color: #0E43F1;
+            padding: 3vw;
+            overflow: hidden;
+        }
+
+        #header {
+            border-bottom: 1px solid #0E43F1;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #header h1 {
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+
+        #header h1 a {
+            color: #0e43f1;
+            font-size: 85px;
+            line-height: 1.1
+        }
+
+        #header h1 em {
+            font-style: normal;
+            font-size: 20px;
+            font-family: 'NEXON Lv1 Gothic OTF';
+            text-transform: uppercase;
+            vertical-align: -15px;
+        }     
+
+       
+
+        .content {
+            width: 100%;
+            display: flex;
+            padding-top: 50px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-family: 'TmonMonsori';
+        }
+        .content h2{
+            width: 100%;
+            margin: 5px 0;
+            color: #0e43f1;
+            
+        }
+
+        .content .javacript {
+            flex-basis: 48%;
+            min-height: 100px;
+            background: #c0ebfd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .content .jquery {
+            flex-basis: 48%;
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        /* prime */
+        
+        
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <main id="contents">
+            <div id="header">
+                <h1><a href="menuEffect-cover.html">자바스크립트 VS 제이쿼리</a><em>  문법 비교</em></h1>                
+            </div>
+            <p>제이쿼리 문법과 자바스크립트 문법을 비교합니다.</p>
+            <section class="content">
+                <h2><span>01</span> 문서 로딩</h2>
+                <div class="javacript">
+<pre class="language-js"><code>
+    const tabBtn = $("#tab-btn > ul li"); 
+    const tabCont = $("#tab-cont > div"); 
+</pre></code>
+                </div>
+                <div class="jquery">
+<pre class="language-js"><code>
+    const tabBtn = $("#tab-btn > ul li"); 
+    const tabCont = $("#tab-cont > div"); 
+</pre></code>                    
+                </div>                         
+            </section>
+            <section class="content">
+                <h2><span>02</span> 문서 로딩</h2>
+                <div class="javacript"></div>
+                <div class="jquery"></div>                         
+            </section>
+            <section class="content">
+                <h2><span>03</span> 문서 로딩</h2>
+                <div class="javacript"></div>
+                <div class="jquery"></div>                         
+            </section>
+        </main>
+    </div>
+
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../assets/skin/prism.js"></script>
+    <script>
+        
+    </script>
+</body>
+
+</html>

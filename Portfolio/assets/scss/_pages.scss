@@ -1,0 +1,430 @@
+@charset "UTF-8";
+
+//컨테이너 (공통요소)
+.container {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+//header
+#header {
+    @include fixed;
+    z-index: 10000;
+    width: 100%;
+    color: $dark-font;
+    background: $dark;
+    border-bottom: 1px solid $dark-line;
+    font-family: $font-eng3;
+    @include center;
+
+    .port {
+        flex: 1 1 35%;
+        padding-left: 40px;
+
+        a {
+            padding: 10px 10px 10px 60px;
+            position: relative;
+
+            &::before {
+                @include content;
+                left: 5px;
+                top: 15px;
+                width: 40px;
+                height: 1px;
+                background: $light;
+            }
+
+            &::after {
+                @include content;
+                left: 5px;
+                bottom: 15px;
+                width: 40px;
+                height: 1px;
+                background: $light;
+            }
+        }
+    }
+
+    .logo {
+        flex: 1 1 30%;
+        text-align: center;
+        font-size: 1.8rem;
+        font-family: $font-eng2;
+        font-weight: bold;
+        margin: 1.3rem;
+
+        a {
+            display: inline-block;
+            padding: 0 5px;
+        }
+    }
+
+    .nav {
+        padding-right: 40px;
+        flex: 1 1 35%;
+        text-align: right;
+
+        ul:first-child {
+            font-family: $font-cho;
+        }
+
+        li {
+            display: inline;
+
+            a {
+                display: inline-block;
+                padding: 2px 5px;
+            }
+        }
+    }
+}
+
+#header.light {
+    color: $light-font;
+    background: $light;
+    border-bottom: 1px solid $light-line;
+
+    .port {
+        a {
+            &::before {
+                background: $dark;
+            }
+
+            &::after {
+                background: $dark;
+            }
+        }
+    }
+}
+
+
+//메인 페이지 
+#mainCont {
+    height: 100vh;
+    background-color: $dark;
+    color: $dark-font;
+    font-size: 10vw;
+}
+
+.main-cont {
+    @include center;
+    height: 100vh;
+}
+
+.main-text {
+    div {
+        font-size: 10vw;
+        line-height: 0.8;
+        text-transform: uppercase;
+    }
+}
+
+
+//footer
+#footer {
+    background: $dark;
+    color: $dark-font;
+    border-top: 1px solid $dark-line;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-info {
+    font-family: $font-eng3;
+    @include center;
+    padding: 20px 130px;
+}
+
+.footer-info div {
+    flex: 1 1 33%;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    padding-left: 10px;
+
+    h3 {
+        font-weight: bold;
+        padding-right: 20px;
+        position: relative;
+
+        &::before {
+            @include content;
+            left: -100px;
+            top: -20px;
+            width: 1px;
+            height: 100vw;
+            background: $dark-line;
+        }
+    }
+
+    p {
+        line-height: 1.5;
+    }
+
+    li {
+        flex: 1 1 35%;
+        list-style: none;
+        margin-right: 20px;
+
+        a {
+            line-height: 1.5;
+            padding: 2px;
+        }
+    }
+}
+
+.email h3::before {
+    display: none;
+}
+
+#footerContact {
+    height: 100vh;
+    background: $dark;
+    @include center;
+
+    .footer-contact {
+        color: $dark-font;
+        text-align: center;
+
+        p {
+            font-family: $font-eng3;
+            font-size: 1.4rem;
+            margin-bottom: 4em;
+            font-weight: 200;
+        }
+
+        h3 {
+            font-family: $font-eng1;
+            font-size: 10vw;
+            line-height: 0.9;
+            margin-bottom: .5em;
+            text-transform: uppercase;
+
+        }
+
+        .contact {
+            font-family: $font-eng3;
+            border: 1px solid #fff;
+            border-radius: 50px;
+            padding: 1em 3em;
+            font-weight: 200;
+        }
+    }
+}
+
+
+//main-title(공통요소)
+.main-title {
+    h1 {
+        font-size: 10vw;
+        line-height: 0.8;
+        text-transform: uppercase;
+        font-family: $font-eng1;
+        padding: 270px 0 250px;
+
+        strong {
+            display: block;
+        }
+
+        em {
+            display: block;
+        }
+    }
+}
+
+// about page
+#aboutCont {
+    background: $light;
+}
+
+.about-cont {
+    .about {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 400px;
+
+        .about-txt {
+            h2 {
+                margin-bottom: 2rem;
+            }
+
+            p {
+                line-height: 1.6;
+                word-break: keep-all;
+                text-align: justify;
+            }
+        }
+    }
+
+    .about:nth-child(1) {
+        .about-img {
+            flex: 0 0 100%;
+        }
+
+        .about-txt {
+            flex: 0 0 100%;
+
+            h2 {
+                margin-top: 2rem;
+            }
+
+            p {
+                margin-right: 30%;
+            }
+        }
+    }
+
+    .about:nth-child(2) {
+        .about-img {
+            flex: 0 0 66%;
+        }
+
+        .about-txt {
+            flex: 0 0 30%;
+        }
+    }
+
+    .about:nth-child(3) {
+        flex-direction: row-reverse;
+
+        .about-img {
+            flex: 0 0 56%;
+        }
+
+        .about-txt {
+            flex: 0 0 40%;
+        }
+    }
+
+}
+
+//reference page
+#referCont {
+    background: $light;
+}
+
+.refer-cont {
+    padding-bottom: 400px;
+
+    h2 {
+        font-size: 1.8rem;
+        font-family: $font-score3;
+        margin-bottom: 1em;
+    }
+
+    .refer-table {
+        table {
+            width: 100%;
+            border-top: 1px solid #000;
+            border-bottom: 2px solid #000;
+
+            td {
+                border-bottom: 1px solid $dark;
+                font-family: $font-score3;
+                padding: 1.5em 0;
+            }
+        }
+    }
+}
+
+// script 페이지
+#scriptCont{
+    background: $light;   
+    .script{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between ;
+        padding-bottom: 100px;
+
+        .script-img img{
+            flex: 1 1 100%;
+            display: none;
+        }
+        .script-img img:nth-child(1){
+            display: block;
+        }
+        h3{
+            margin: 20px 0;
+            flex: 1 1 100%;
+            font-size: 1.8rem;
+        }
+        .script-txt{
+            flex: 0 0 60%;
+            dl{
+                flex-wrap: wrap;
+                display: flex;
+                justify-content: space-between ;
+                text-align: justify;                
+            }
+            dt{flex: 0 0 48%;}
+            dd{flex: 0 0 48%;}
+        }
+        .script_btn{
+            flex: 0 0 40%;
+            ul{
+                margin-left: 50px;
+                display: flex;
+                font-display: row;
+                flex-wrap: wrap;                               
+            }
+            li{
+                list-style: none;
+                border: 1px dashed #666;
+                border-radius: 50%;
+                margin: 0 20px 20px 20px;
+                flex-basis: 5%;
+                padding: 10px 12px;
+                text-align: center;
+            } 
+            li.active{
+                border: 2px solid #444;
+                background: #444;
+                color: #fff;
+            }
+        }
+    }
+}
+
+// login 페이지
+#loginCont {
+    height: 100vh;
+    background-color: $dark;
+    color: $dark-font;
+    font-size: 10vw;    
+    position: relative;
+}
+.log_content{
+    @include center;
+    flex-direction: column;
+    height: 100vh;
+    font-size: 18px;
+    h1{
+        text-align: center;
+    }
+    .log_text{
+        display: flex;
+        flex-direction: column; 
+        input{
+            width: 363px; height: 53px;
+            background-color: $dark;
+            border: 1px solid $light;
+        }
+        input::placeholder{
+            padding: 15px;
+        }
+        .log_id{
+            margin: 23px 0 10px;
+        }
+        .log_pw{
+            margin: 10px 0;
+        }
+    }    
+    .log_btn{
+        width: 363px; height: 53px;
+        margin: 10px 0 23px;
+    }
+}

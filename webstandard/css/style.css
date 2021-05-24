@@ -1,4 +1,3 @@
-#wrap {}
 
 #header {
   height: 325px;
@@ -7,9 +6,6 @@
   background-position: center;
 
   /*background: url(../img/header_bg.jpg) repeat-x center;*/
-}
-
-#contents {
 }
 
 #footer {
@@ -40,8 +36,6 @@
 }
 
 /*헤더*/
-.header {}
-
 .header .header-menu {
   text-align: right;
 }

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vertical2</title>
+</head>
+<style>
+    @font-face {
+    font-family: 'WandohopeB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/WandohopeB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+    *{
+        margin: 0;padding: 0;box-sizing: border-box;
+    }
+    #contents{}
+    #contents > section > div {
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+        font-size: 8vw;
+        color: #fff;
+        font-family: 'WandohopeB';
+    }
+    #section1{
+        position: relative;
+        /* background: url(../assets/img-effect/img_nv01.png);
+        background-size: cover; 
+        background-attachment: fixed; */
+        background: #000;
+        z-index: 6000;
+    }
+    #section2{
+        position: relative;
+        /* background: url(../assets/img-effect/img_nv02.png);
+        background-size: cover; 
+        background-attachment: fixed; */
+        background: #111;
+        z-index: 5000;
+    }
+    #section3{
+        position: relative;
+        /* background: url(../assets/img-effect/img_nv03.png);
+        background-size: cover; 
+        background-attachment: fixed; */
+        background: rgb(236, 187, 187);
+        z-index: 4000;
+        height: 1000vh;         /* .sec3에 position: fixed주면 영역 없어짐 -> 부모에 영역지정 */
+        /* height: 1000vh; 값 조정으로 가로 스크롤시 화면 노출 길이가 달라짐 -> 값이 커질수록 노출 길이 길어짐*/
+    }
+    #section4{
+        position: relative;
+        /* background: url(../assets/img-effect/img_nv04.png);
+        background-size: cover; 
+        background-attachment: fixed; */
+        background: #333;
+        z-index: 5000;
+    }
+    #section5{
+        position: relative;
+        /* background: url(../assets/img-effect/img_nv05.png);
+        background-size: cover; 
+        background-attachment: fixed; */
+        background: #444;
+        z-index: 5000;
+    }
+    #section6{
+        position: relative;
+        /* background: url(../assets/img-effect/img_nv06.png);
+        background-size: cover; 
+        background-attachment: fixed; */
+        background: #555;
+        z-index: 5000;
+    }
+    .sec1{
+        position: relative;
+        width: 100%; height: 100vh;
+    }
+    .sec2{
+        position: relative;
+        width: 100%; height: 100vh;
+    }
+    .sec3{
+        position: fixed;
+        width: 100vw; height: 100vh;
+        left: 0; top: 0;
+    }
+    .sec4{
+        position: relative;
+        width: 100%; height: 100vh;
+    }
+    .sec5{
+        position: relative;
+        width: 100%; height: 100vh;
+    }
+    .sec6{
+        position: relative;
+        width: 100%; height: 100vh;
+    }
+    .vertical-wrap{
+        overflow: hidden;
+        width: 500vw;
+    }
+    .vertical-wrap > div{
+        float: left;
+        width: 100vw; height: 100vh;
+    }
+    .vertical-wrap > div:nth-child(1){background: #999;}
+    .vertical-wrap > div:nth-child(2){background: #888;}
+    .vertical-wrap > div:nth-child(3){background: #777;}
+    .vertical-wrap > div:nth-child(4){background: #666;}
+    .vertical-wrap > div:nth-child(5){background: #555;}
+
+    .scroll{
+        position: fixed;
+        right: 10px; top: 10px;
+        width: 50px; height: 50px;
+        background: rgba(255,255,255,0.5);
+        text-align: center;
+        line-height: 50px;
+        color: #000;
+        z-index: 10000;
+    }
+</style>
+<body>
+    <div class="scroll">0</div>
+    <div id="contents">
+        <section id="section1"><div class="sec1"><h2>sec1</h2></div></section>
+        <!-- //section1 -->
+        <section id="section2"><div class="sec2"><h2>sec2</h2></div></section>
+        <!-- //section2 -->
+        <section id="section3">
+            <div class="sec3">
+                <div class="vertical-wrap">
+                    <div>01</div>
+                    <div>02</div>
+                    <div>03</div>
+                    <div>04</div>
+                    <div>05</div>
+                </div>
+            </div>
+        </section>
+        <!-- //section3 -->
+        <section id="section4"><div class="sec4"><h2>sec4</h2></div></section>
+        <!-- //section4 -->
+        <section id="section5"><div class="sec5"><h2>sec5</h2></div></section>
+        <!-- //section5 -->
+        <section id="section6"><div class="sec6"><h2>sec6</h2></div></section>
+        <!-- //section6 -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script>
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+
+            $(".scroll").text(scrollTop);
+
+            let offset = scrollTop - $("#section3").offset().top;            // section3의 01번부터 시작하도록 설정
+
+            if( scrollTop > $("#section3").offset().top ){
+                $("#section3 .sec3").css("left", -offset);
+            }
+        })
+    </script>
+</body>
+</html>

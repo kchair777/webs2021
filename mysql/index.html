@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords"
+        content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
+    <title>김예진 | Kimyj | MYSQL</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../assets/css/prism.css" rel="stylesheet">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
+    <link rel="icon" href="../assets/ico/icon.png">
+    <link rel="icon" href="../assets/ico/favicon_57.png" sizes="16x16">
+    <link rel="icon" href="../assets/ico/favicon_72.png" sizes="32x32">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="48x48">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="64x64">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="128x128">
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="웹스토리보이" />
+    <meta property="og:url" content="https://webstoryboy.co.kr/" />
+    <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <meta property="og:site_name" content="웹스토리보이" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@webstoryboy" />
+    <meta name="twitter:title" content="웹스토리보이" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand">YEJIN'S &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://websinssa.tistory.com/">Tistory</a></li>
+                    <li><a href="https://codepen.io/webstoryboy">Codepen</a></li>
+                    <li><a href="https://github.com/webstoryboy/dothome1">Github</a></li>
+                    <li><a href="https://www.figma.com/@874463">Figma</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bs-header bgs1" id="content">
+        <div class="container">
+            <h1>Mysql Reference v1.0 &lt;/doc&gt;</h1>
+            <p><a href="https://webstoryboy.co.kr" target="_blank">http://kimyj6419.dothome.co.kr/</a></p>
+        </div>
+    </div>
+    <div class="container bs-docs-container">
+
+        <div class="row">
+            <div class="col-md-9" role="main">
+                <!-- Intro1 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">MYSQL</h2>                    
+                        <p class="lead">MYSQL은 데이터베이스 소프트웨어입니다. 일반적으로 데이터를 추가하거나 검색, 추출하는 기능을 모두 포함해서 데이터베이스라고 부릅니다.</p>
+                        <p>MYSQL은 세계에서 가장 많이 쓰이는 오픈 소스의 관계형 데이터베이스 관리 시스템(RDBMS)입니다. MYSQL은 PHP 스크립트 언어와 상호 연동이 잘 되면서 오픈소스로
+                            개발된 무료 프로그램입니다. 그래서 홈페이지나 쇼핑몰(워드프레스, cafe24, 제로보드, 그누보드) 등 일반적으로 웹 개발에 널리 사용하고 있습니다.
+                        </p>                  
+                </div>
+                <!-- //Intro1 -->
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">MYSQL 설치</h2>                    
+                        <p class="lead">MYSQL은 데이터베이스 소프트웨어입니다. 일반적으로 데이터를 추가하거나 검색, 추출하는 기능을 모두 포함해서 데이터베이스라고 부릅니다.</p>
+                        <p>MYSQL은 세계에서 가장 많이 쓰이는 오픈 소스의 관계형 데이터베이스 관리 시스템(RDBMS)입니다. MYSQL은 PHP 스크립트 언어와 상호 연동이 잘 되면서 오픈소스로
+                            개발된 무료 프로그램입니다. 그래서 홈페이지나 쇼핑몰(워드프레스, cafe24, 제로보드, 그누보드) 등 일반적으로 웹 개발에 널리 사용하고 있습니다.
+                        </p> 
+                        <img src="img/down.png" alt="이미지">  
+                        
+                        <h3 class="pt50">실행하기</h3>
+                        <div class="bs-callout bs-callout-info">mysql -uroot -proot</div>
+<pre class="language-js"><code>    C:\Users\line>cd..
+
+    C:\Users>cd..
+    
+    C:\>cd MAMP\bin\mysql\bin
+    
+    C:\MAMP\bin\mysql\bin>mysql -uroot -proot
+    mysql: [Warning] Using a password on the command line interface can be insecure.
+    Welcome to the MySQL monitor.  Commands end with ; or \g.
+    Your MySQL connection id is 3
+    Server version: 5.7.24 MySQL Community Server (GPL)
+    
+    Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+    
+    Oracle is a registered trademark of Oracle Corporation and/or its
+    affiliates. Other names may be trademarks of their respective
+    owners.
+    
+    Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+    
+    mysql>
+</code></pre>
+                </div>
+                <!-- //Intro2 -->
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">데이터베이스 만들기</h2>          
+                    <h3 class="pt50">데이터베이스 만들기</h3>
+                    <div class="bs-callout bs-callout-info">create database 데이터베이스 이름</div>
+<pre class="language-js"><code>    mysql> create database test01;
+    Query OK, 1 row affected (0.00 sec)
+</code></pre>                    
+                    <h3 class="pt50">데이터베이스 보기</h3>
+                    <div class="bs-callout bs-callout-info">show databases;</div>
+<pre class="language-js"><code>    mysql> create database test01;
+    Query OK, 1 row affected (0.00 sec)
+    
+    mysql> show databases;
+    +--------------------+
+    | Database           |
+    +--------------------+
+    | information_schema |
+    | mysql              |
+    | performance_schema |
+    | sys                |
+    | test01             |
+    +--------------------+
+    5 rows in set (0.00 sec)
+    
+    mysql>
+</code></pre>                
+                    <h3 class="pt50">데이터베이스 사용</h3>
+                    <div class="bs-callout bs-callout-info">use 데이터베이스 이름</div>    
+<pre class="language-js"><code>    mysql> use test01;
+    Database changed
+</code></pre>
+                </div>
+                <!-- //Intro3 -->
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">테이블</h2>                    
+                        <h3 id="intro4-1" class="pt50">테이블 만들기</h3>   
+                        <div class="bs-callout bs-callout-info">create table 테이블 이름()</div>
+<pre class="language-js"><code>    mysql> create table myMember2(
+    -> myMemberID int(10) unsigned auto_increment comment "고객의 고유 번호",
+    -> userID varchar(15) not null comment "고객의 아이디",
+    -> name varchar(10) not null comment "고객의 이름",
+    -> password varchar(30) not null comment "고객의 비밀번호",
+    -> phone varchar(13) not null comment "고객의 번호",
+    -> email varchar(30) not null comment "고객의 이메일",
+    -> birthDay char(10) not null comment "고객의 생일",
+    -> gender enum('m','w','x') default 'x' comment "남성 m, 여성 w",
+    -> regTime datetime not null comment "회원가입 시간",
+    -> primary key(myMemberID))
+    -> charset=utf8 comment="고객 정보 테이블";
+Query OK, 0 rows affected (0.01 sec)   
+</code></pre>            
+                        <h3 id="intro4-2" class="pt50">테이블 전체 보기</h3>
+                        <div class="bs-callout bs-callout-info">show tables;</div>   
+<pre class="language-js"><code>    mysql> show tables;
+    +------------------+
+    | Tables_in_test01 |
+    +------------------+
+    | mymember         |
+    | mymember2        |
+    +------------------+
+    2 rows in set (0.00 sec)
+</code></pre>            
+                        <h3 id="intro4-3" class="pt50">테이블 필드 보기</h3>
+                        <div class="bs-callout bs-callout-info">desc 테이블 이름</div>  
+<pre class="language-js"><code>    mysql> desc mymember2;
+    +------------+-------------------+------+-----+---------+----------------+
+    | Field      | Type              | Null | Key | Default | Extra          |
+    +------------+-------------------+------+-----+---------+----------------+
+    | myMemberID | int(10) unsigned  | NO   | PRI | NULL    | auto_increment |
+    | userID     | varchar(15)       | NO   |     | NULL    |                |
+    | name       | varchar(10)       | NO   |     | NULL    |                |
+    | password   | varchar(30)       | NO   |     | NULL    |                |
+    | phone      | varchar(13)       | NO   |     | NULL    |                |
+    | email      | varchar(30)       | NO   |     | NULL    |                |
+    | birthDay   | char(10)          | NO   |     | NULL    |                |
+    | gender     | enum('m','w','x') | YES  |     | x       |                |
+    | regTime    | datetime          | NO   |     | NULL    |                |
+    +------------+-------------------+------+-----+---------+----------------+
+    9 rows in set (0.00 sec)   
+</code></pre>  
+                </div>
+                
+                <!-- //Intro4 -->
+                <!-- Intro5 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro5" class="page-header">테이블 수정</h2>                                                
+                        <h3 id="intro5-1" class="pt50">필드 추가하기</h3>  
+                        <div class="bs-callout bs-callout-info">ALTER TABLE 테이블이름 ADD 추가할 필드명, 옵션 AFTER 위치</div> 
+<pre class="language-js"><code>    ALTER TABLE mymember2 ADD age int(3) not null comment "고객의 나이" AFTER birthDay; 
+    mysql> desc mymember2;
+    +------------+-------------------+------+-----+---------+----------------+
+    | Field      | Type              | Null | Key | Default | Extra          |
+    +------------+-------------------+------+-----+---------+----------------+
+    | myMemberID | int(10) unsigned  | NO   | PRI | NULL    | auto_increment |
+    | userID     | varchar(15)       | NO   |     | NULL    |                |
+    | name       | varchar(10)       | NO   |     | NULL    |                |
+    | password   | varchar(30)       | NO   |     | NULL    |                |
+    | phone      | varchar(13)       | NO   |     | NULL    |                |
+    | email      | varchar(30)       | NO   |     | NULL    |                |
+    | birthDay   | char(10)          | NO   |     | NULL    |                |
+    | age        | int(3)            | NO   |     | NULL    |                |
+    | gender     | enum('m','w','x') | YES  |     | x       |                |
+    | regTime    | datetime          | NO   |     | NULL    |                |
+    +------------+-------------------+------+-----+---------+----------------+
+    10 rows in set (0.00 sec)   
+</code></pre>            
+                        <h3 id="intro5-2" class="pt50">필드 수정하기</h3>  
+                        <div class="bs-callout bs-callout-info">ALTER TABLE 테이블이름 MODIFY 수정할 필드명</div> 
+<pre class="language-js"><code>    mysql> ALTER TABLE mymember2 MODIFY gender enum('m','w') comment "고객의 성별";
+    Query OK, 0 rows affected (0.02 sec)
+    Records: 0  Duplicates: 0  Warnings: 0
+    
+    mysql> desc mymember2;
+    +------------+------------------+------+-----+---------+----------------+
+    | Field      | Type             | Null | Key | Default | Extra          |
+    +------------+------------------+------+-----+---------+----------------+
+    | myMemberID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+    | userID     | varchar(15)      | NO   |     | NULL    |                |
+    | name       | varchar(10)      | NO   |     | NULL    |                |
+    | password   | varchar(30)      | NO   |     | NULL    |                |
+    | phone      | varchar(13)      | NO   |     | NULL    |                |
+    | email      | varchar(30)      | NO   |     | NULL    |                |
+    | birthDay   | char(10)         | NO   |     | NULL    |                |
+    | age        | int(3)           | NO   |     | NULL    |                |
+    | gender     | enum('m','w')    | YES  |     | NULL    |                |
+    | regTime    | datetime         | NO   |     | NULL    |                |
+    +------------+------------------+------+-----+---------+----------------+
+    10 rows in set (0.00 sec)    
+</code></pre>   
+                        <h3 id="intro5-3" class="pt50">필드 삭제하기</h3>  
+                        <div class="bs-callout bs-callout-info">ALTER TABLE 테이블이름 DROP 삭제할 필드명</div> 
+<pre class="language-js"><code>    mysql> ALTER TABLE mymember2 DROP age;
+    Query OK, 0 rows affected (0.01 sec)
+    Records: 0  Duplicates: 0  Warnings: 0
+    
+    mysql> desc mymember2;
+    +------------+------------------+------+-----+---------+----------------+
+    | Field      | Type             | Null | Key | Default | Extra          |
+    +------------+------------------+------+-----+---------+----------------+
+    | myMemberID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+    | userID     | varchar(15)      | NO   |     | NULL    |                |
+    | name       | varchar(10)      | NO   |     | NULL    |                |
+    | password   | varchar(30)      | NO   |     | NULL    |                |
+    | phone      | varchar(13)      | NO   |     | NULL    |                |
+    | email      | varchar(30)      | NO   |     | NULL    |                |
+    | birthDay   | char(10)         | NO   |     | NULL    |                |
+    | gender     | enum('m','w')    | YES  |     | NULL    |                |
+    | regTime    | datetime         | NO   |     | NULL    |                |
+    +------------+------------------+------+-----+---------+----------------+
+    9 rows in set (0.00 sec)   
+</code></pre>                       
+                </div>
+                
+                <!-- //Intro5 -->
+                 <!-- Intro6 -->
+                 <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header">테이블 데이터</h2>             
+                    <h3 id="intro6-1" class="pt50">데이터 입력하기</h3>
+                        <div class="bs-callout bs-callout-info">INSERT INTO 테이블이름(필드이름) VALIES(데이터)</div>
+<pre class="language-js"><code>INSERT INTO mymember2(userID, name, password, phone, email, birthDay, gender, regTime) VALUES('kimyj6419', '김예진', '1234', '010-6419-3955', 'kimyj6419@gmail.com', '1993-05-31', 'w', now());    
+</code></pre>
+                    <h3 id="intro6-2" class="pt50">데이터 불러오기</h3>  
+                    <div class="bs-callout bs-callout-info">SELECT * FROM 테이블이름</div> 
+<pre class="language-js"><code>    mysql> SELECT * FROM mymember2;
+    +------------+-------------+--------+----------+---------------+--------------------------+------------+--------+---------------------+
+    | myMemberID | userID      | name   | password | phone         | email                    | birthday   | gender | regTime             |
+    +------------+-------------+--------+----------+---------------+--------------------------+------------+--------+---------------------+
+    |          1 | kimyj6419   | 김예진 | 12345    | 010-6419-3955 | kimyj6419@gmail.com      | 1993-05-31 | w      | 2021-05-10 13:07:28 |
+    |          2 | silvery92   | 김은영 | 12345678 | 010-6380-1805 | 9silvery2@gmail.com      | 1992-05-18 | w      | 2021-05-10 13:11:02 |
+    |          3 | webstoryboy | 황상연 | 1234     | 010-9312-8000 | webstroyboy@naver.com    | 1999-04-04 | m      | 2021-05-10 13:12:41 |
+    |          4 | JIMMY       | 이학진 | ZZZZ1    | 010-6547-1082 | yone10@naver.com         | 1993-10-09 | m      | 2021-05-10 13:12:53 |
+    |          5 | Min         | 이창민 | 1234     | 010-3840-9480 | leechangmin000@naver.com | 1999-04-14 | m      | 2021-05-10 13:13:10 |
+    |          6 | yuurim      | 최유림 | 2205     | 010-9764-2205 | csm2205@naver,com        | 1995-11-09 | w      | 2021-05-10 13:13:21 |
+    |          7 | jinmopin    | 진재현 | 1234     | 010-9425-8244 | jinmopin@gmail.com       | 1994-12-19 | m      | 2021-05-10 13:13:31 |
+    |          8 | hyj981015   | 한연정 | 1015     | 010-8709-1271 | hanyeonjeong@naver.com   | 1998-10-15 | w      | 2021-05-10 13:13:54 |
+    |          9 | inyoung     | 홍인영 | 0000     | 010-5192-5705 | inyoung2200@naver.com    | 1995-09-23 | w      | 2021-05-10 13:14:25 |
+    |         10 | hohosusu    | 오수인 | 1234     | 010-4419-6525 | hohosusu@naver.com       | 1993-02-17 | w      | 2021-05-10 13:14:36 |
+    +------------+-------------+--------+----------+---------------+--------------------------+------------+--------+---------------------+
+    10 rows in set (0.00 sec)    
+</code></pre> 
+                    <div class="bs-callout bs-callout-info">SELECT 필드이름 FROM 테이블이름 WHERE 조건</div>
+<pre class="language-js"><code>    mysql> SELECT userID, name FROM mymember2;
+    +-------------+--------+
+    | userID      | name   |
+    +-------------+--------+
+    | kimyj6419   | 김예진 |
+    | silvery92   | 김은영 |
+    | webstoryboy | 황상연 |
+    | JIMMY       | 이학진 |
+    | Min         | 이창민 |
+    | yuurim      | 최유림 |
+    | jinmopin    | 진재현 |
+    | hyj981015   | 한연정 |
+    | inyoung     | 홍인영 |
+    | hohosusu    | 오수인 |
+    +-------------+--------+
+    10 rows in set (0.00 sec)   
+</code></pre>
+                    <p>memberID가 1번인 경우</p>
+<pre class="language-js"><code>    mysql> SELECT * FROM mymember2 WHERE mymemberID = 1;
+    +------------+-----------+--------+----------+---------------+---------------------+------------+--------+---------------------+
+    | myMemberID | userID    | name   | password | phone         | email               | birthday   | gender | regTime             |
+    +------------+-----------+--------+----------+---------------+---------------------+------------+--------+---------------------+
+    |          1 | kimyj6419 | 김예진 | 12345    | 010-6419-3955 | kimyj6419@gmail.com | 1993-05-31 | w      | 2021-05-10 13:07:28 |
+    +------------+-----------+--------+----------+---------------+---------------------+------------+--------+---------------------+
+    1 row in set (0.00 sec)  
+</code></pre>
+                    <p>앞뒤에 어떠한 텍스트가 있는 경우 텍스트 앞뒤로 '%'를 붙입니다.</p>
+<pre class="language-js"><code>    mysql>  SELECT * FROM mymember2 WHERE name LIKE '%김%';
+    +------------+-----------+--------+----------+---------------+---------------------+------------+--------+---------------------+
+    | myMemberID | userID    | name   | password | phone         | email               | birthday   | gender | regTime             |
+    +------------+-----------+--------+----------+---------------+---------------------+------------+--------+---------------------+
+    |          1 | kimyj6419 | 김예진 | 12345    | 010-6419-3955 | kimyj6419@gmail.com | 1993-05-31 | w      | 2021-05-10 13:07:28 |
+    |          2 | silvery92 | 김은영 | 12345678 | 010-6380-1805 | 9silvery2@gmail.com | 1992-05-18 | w      | 2021-05-10 13:11:02 |
+    +------------+-----------+--------+----------+---------------+---------------------+------------+--------+---------------------+
+    2 rows in set (0.00 sec)    
+</code></pre>                    
+                    <p>앞에 아무것도 없는 데이터를 찾는다면 뒤에만 '%'를 붙입니다.</p>
+<pre class="language-js"><code>    mysql> SELECT * FROM mymember2 WHERE email LIKE 'web%';
+    +------------+-------------+--------+----------+---------------+-----------------------+------------+--------+---------------------+
+    | myMemberID | userID      | name   | password | phone         | email                 | birthday   | gender | regTime             |
+    +------------+-------------+--------+----------+---------------+-----------------------+------------+--------+---------------------+
+    |          3 | webstoryboy | 황상연 | 1234     | 010-9312-8000 | webstroyboy@naver.com | 1999-04-04 | m      | 2021-05-10 13:12:41 |
+    +------------+-------------+--------+----------+---------------+-----------------------+------------+--------+---------------------+
+    1 row in set (0.00 sec)    
+</code></pre>
+                    <p>앞에 어떠한 텍스트가 있고, 뒤에 아무것도 없는 데이터를 찾는다면 앞에만 '%'를 붙입니다.</p>
+<pre class="language-js"><code>    mysql> SELECT * FROM mymember2 WHERE name LIKE '%진';
+    +------------+-----------+--------+----------+---------------+---------------------+------------+--------+---------------------+
+    | myMemberID | userID    | name   | password | phone         | email               | birthday   | gender | regTime             |
+    +------------+-----------+--------+----------+---------------+---------------------+------------+--------+---------------------+
+    |          1 | kimyj6419 | 김예진 | 12345    | 010-6419-3955 | kimyj6419@gmail.com | 1993-05-31 | w      | 2021-05-10 13:07:28 |
+    |          4 | JIMMY     | 이학진 | ZZZZ1    | 010-6547-1082 | yone10@naver.com    | 1993-10-09 | m      | 2021-05-10 13:12:53 |
+    +------------+-----------+--------+----------+---------------+---------------------+------------+--------+---------------------+
+    2 rows in set (0.00 sec)  
+</code></pre>
+                    <p>멤버 아이디 조건 검색</p>
+<pre class="language-js"><code>    mysql> SELECT * FROM mymember2 WHERE mymemberID >=1 AND mymemberID <=3;
+    +------------+-------------+--------+----------+---------------+-----------------------+------------+--------+---------------------+
+    | myMemberID | userID      | name   | password | phone         | email                 | birthday   | gender | regTime             |
+    +------------+-------------+--------+----------+---------------+-----------------------+------------+--------+---------------------+
+    |          1 | kimyj6419   | 김예진 | 12345    | 010-6419-3955 | kimyj6419@gmail.com   | 1993-05-31 | w      | 2021-05-10 13:07:28 |
+    |          2 | silvery92   | 김은영 | 12345678 | 010-6380-1805 | 9silvery2@gmail.com   | 1992-05-18 | w      | 2021-05-10 13:11:02 |
+    |          3 | webstoryboy | 황상연 | 1234     | 010-9312-8000 | webstroyboy@naver.com | 1999-04-04 | m      | 2021-05-10 13:12:41 |
+    +------------+-------------+--------+----------+---------------+-----------------------+------------+--------+---------------------+
+    3 rows in set (0.00 sec)  
+</code></pre>           
+                    <p>이름의 첫 글자가 '김'씨 이거나 '황'씨인 경우를 검색</p> 
+<pre class="language-js"><code>    mysql> SELECT * FROM mymember2 WHERE name LIKE '김%' OR name LIKE '황%';
+    +------------+-------------+--------+----------+---------------+-----------------------+------------+--------+---------------------+
+    | myMemberID | userID      | name   | password | phone         | email                 | birthday   | gender | regTime             |
+    +------------+-------------+--------+----------+---------------+-----------------------+------------+--------+---------------------+
+    |          1 | kimyj6419   | 김예진 | 12345    | 010-6419-3955 | kimyj6419@gmail.com   | 1993-05-31 | w      | 2021-05-10 13:07:28 |
+    |          2 | silvery92   | 김은영 | 12345678 | 010-6380-1805 | 9silvery2@gmail.com   | 1992-05-18 | w      | 2021-05-10 13:11:02 |
+    |          3 | webstoryboy | 황상연 | 1234     | 010-9312-8000 | webstroyboy@naver.com | 1999-04-04 | m      | 2021-05-10 13:12:41 |
+    +------------+-------------+--------+----------+---------------+-----------------------+------------+--------+---------------------+
+    3 rows in set (0.00 sec)  
+</code></pre> 
+                    <h3 id="intro6-3" class="pt50">데이터 수정하기</h3>
+                    <div class="bs-callout bs-callout-info">UPDATE 테이블이름 SET 필드이름 조건</div>
+                    <p>회원 아이디가 1번인 번호를 변경</p> 
+<pre class="language-js"><code>    mysql> UPDATE mymember2 SET phone ='010-6419-3000' WHERE mymemberID =1;
+    Query OK, 1 row affected (0.00 sec)
+    Rows matched: 1  Changed: 1  Warnings: 0
+    
+    mysql>  SELECT * FROM mymember2;
+    +------------+-------------+--------+----------+---------------+--------------------------+------------+--------+---------------------+
+    | myMemberID | userID      | name   | password | phone         | email                    | birthday   | gender | regTime             |
+    +------------+-------------+--------+----------+---------------+--------------------------+------------+--------+---------------------+
+    |          1 | kimyj6419   | 김예진 | 12345    | 010-6419-3000 | kimyj6419@gmail.com      | 1993-05-31 | w      | 2021-05-10 13:07:28 |
+    |          2 | silvery92   | 김은영 | 12345678 | 010-6380-1805 | 9silvery2@gmail.com      | 1992-05-18 | w      | 2021-05-10 13:11:02 |
+    |          3 | webstoryboy | 황상연 | 1234     | 010-9312-8000 | webstroyboy@naver.com    | 1999-04-04 | m      | 2021-05-10 13:12:41 |
+    |          4 | JIMMY       | 이학진 | ZZZZ1    | 010-6547-1082 | yone10@naver.com         | 1993-10-09 | m      | 2021-05-10 13:12:53 |
+    |          5 | Min         | 이창민 | 1234     | 010-3840-9480 | leechangmin000@naver.com | 1999-04-14 | m      | 2021-05-10 13:13:10 |
+    |          6 | yuurim      | 최유림 | 2205     | 010-9764-2205 | csm2205@naver,com        | 1995-11-09 | w      | 2021-05-10 13:13:21 |
+    |          7 | jinmopin    | 진재현 | 1234     | 010-9425-8244 | jinmopin@gmail.com       | 1994-12-19 | m      | 2021-05-10 13:13:31 |
+    |          8 | hyj981015   | 한연정 | 1015     | 010-8709-1271 | hanyeonjeong@naver.com   | 1998-10-15 | w      | 2021-05-10 13:13:54 |
+    |          9 | inyoung     | 홍인영 | 0000     | 010-5192-5705 | inyoung2200@naver.com    | 1995-09-23 | w      | 2021-05-10 13:14:25 |
+    |         10 | hohosusu    | 오수인 | 1234     | 010-4419-6525 | hohosusu@naver.com       | 1993-02-17 | w      | 2021-05-10 13:14:36 |
+    +------------+-------------+--------+----------+---------------+--------------------------+------------+--------+---------------------+
+    10 rows in set (0.00 sec)     
+</code></pre>
+                    <p>모든 회원 비밀번호를 '1234'로 변경</p> 
+<pre class="language-js"><code>    mysql> UPDATE mymember2 SET password = '1234';
+    Query OK, 6 rows affected (0.00 sec)
+    Rows matched: 10  Changed: 6  Warnings: 0
+    
+    mysql> SELECT * FROM mymember2;
+    +------------+-------------+--------+----------+---------------+--------------------------+------------+--------+---------------------+
+    | myMemberID | userID      | name   | password | phone         | email                    | birthday   | gender | regTime             |
+    +------------+-------------+--------+----------+---------------+--------------------------+------------+--------+---------------------+
+    |          1 | kimyj6419   | 김예진 | 1234     | 010-6419-3000 | kimyj6419@gmail.com      | 1993-05-31 | w      | 2021-05-10 13:07:28 |
+    |          2 | silvery92   | 김은영 | 1234     | 010-6380-1805 | 9silvery2@gmail.com      | 1992-05-18 | w      | 2021-05-10 13:11:02 |
+    |          3 | webstoryboy | 황상연 | 1234     | 010-9312-8000 | webstroyboy@naver.com    | 1999-04-04 | m      | 2021-05-10 13:12:41 |
+    |          4 | JIMMY       | 이학진 | 1234     | 010-6547-1082 | yone10@naver.com         | 1993-10-09 | m      | 2021-05-10 13:12:53 |
+    |          5 | Min         | 이창민 | 1234     | 010-3840-9480 | leechangmin000@naver.com | 1999-04-14 | m      | 2021-05-10 13:13:10 |
+    |          6 | yuurim      | 최유림 | 1234     | 010-9764-2205 | csm2205@naver,com        | 1995-11-09 | w      | 2021-05-10 13:13:21 |
+    |          7 | jinmopin    | 진재현 | 1234     | 010-9425-8244 | jinmopin@gmail.com       | 1994-12-19 | m      | 2021-05-10 13:13:31 |
+    |          8 | hyj981015   | 한연정 | 1234     | 010-8709-1271 | hanyeonjeong@naver.com   | 1998-10-15 | w      | 2021-05-10 13:13:54 |
+    |          9 | inyoung     | 홍인영 | 1234     | 010-5192-5705 | inyoung2200@naver.com    | 1995-09-23 | w      | 2021-05-10 13:14:25 |
+    |         10 | hohosusu    | 오수인 | 1234     | 010-4419-6525 | hohosusu@naver.com       | 1993-02-17 | w      | 2021-05-10 13:14:36 |
+    +------------+-------------+--------+----------+---------------+--------------------------+------------+--------+---------------------+
+    10 rows in set (0.00 sec)     
+</code></pre>
+                    <h3 id="intro6-4" class="pt50">데이터(레코드) 삭제하기</h3>
+                    <div class="bs-callout bs-callout-info">DELETE FROM 테이블이름 조건</div>
+                    <p>멤버 아이디가 3번인 레코드 삭제</p> 
+<pre class="language-js"><code>    mysql> DELETE FROM mymember2 WHERE mymemberID = 3;
+    Query OK, 1 row affected (0.00 sec)
+    
+    mysql>  SELECT * FROM mymember2;
+    +------------+-----------+--------+----------+---------------+--------------------------+------------+--------+---------------------+
+    | myMemberID | userID    | name   | password | phone         | email                    | birthday   | gender | regTime             |
+    +------------+-----------+--------+----------+---------------+--------------------------+------------+--------+---------------------+
+    |          1 | kimyj6419 | 김예진 | 1234     | 010-6419-3000 | kimyj6419@gmail.com      | 1993-05-31 | w      | 2021-05-10 13:07:28 |
+    |          2 | silvery92 | 김은영 | 1234     | 010-6380-1805 | 9silvery2@gmail.com      | 1992-05-18 | w      | 2021-05-10 13:11:02 |
+    |          4 | JIMMY     | 이학진 | 1234     | 010-6547-1082 | yone10@naver.com         | 1993-10-09 | m      | 2021-05-10 13:12:53 |
+    |          5 | Min       | 이창민 | 1234     | 010-3840-9480 | leechangmin000@naver.com | 1999-04-14 | m      | 2021-05-10 13:13:10 |
+    |          6 | yuurim    | 최유림 | 1234     | 010-9764-2205 | csm2205@naver,com        | 1995-11-09 | w      | 2021-05-10 13:13:21 |
+    |          7 | jinmopin  | 진재현 | 1234     | 010-9425-8244 | jinmopin@gmail.com       | 1994-12-19 | m      | 2021-05-10 13:13:31 |
+    |          8 | hyj981015 | 한연정 | 1234     | 010-8709-1271 | hanyeonjeong@naver.com   | 1998-10-15 | w      | 2021-05-10 13:13:54 |
+    |          9 | inyoung   | 홍인영 | 1234     | 010-5192-5705 | inyoung2200@naver.com    | 1995-09-23 | w      | 2021-05-10 13:14:25 |
+    |         10 | hohosusu  | 오수인 | 1234     | 010-4419-6525 | hohosusu@naver.com       | 1993-02-17 | w      | 2021-05-10 13:14:36 |
+    +------------+-----------+--------+----------+---------------+--------------------------+------------+--------+---------------------+
+    9 rows in set (0.00 sec)
+</code></pre>
+                    <p>멤버 아이디가 4,5,6번인 레코드 삭제</p> 
+<pre class="language-js"><code>    mysql> DELETE FROM mymember2 WHERE mymemberID IN(4,5,6);
+    Query OK, 3 rows affected (0.00 sec)
+    
+    mysql> SELECT * FROM mymember2;
+    +------------+-----------+--------+----------+---------------+------------------------+------------+--------+---------------------+
+    | myMemberID | userID    | name   | password | phone         | email                  | birthday   | gender | regTime             |
+    +------------+-----------+--------+----------+---------------+------------------------+------------+--------+---------------------+
+    |          1 | kimyj6419 | 김예진 | 1234     | 010-6419-3000 | kimyj6419@gmail.com    | 1993-05-31 | w      | 2021-05-10 13:07:28 |
+    |          2 | silvery92 | 김은영 | 1234     | 010-6380-1805 | 9silvery2@gmail.com    | 1992-05-18 | w      | 2021-05-10 13:11:02 |
+    |          7 | jinmopin  | 진재현 | 1234     | 010-9425-8244 | jinmopin@gmail.com     | 1994-12-19 | m      | 2021-05-10 13:13:31 |
+    |          8 | hyj981015 | 한연정 | 1234     | 010-8709-1271 | hanyeonjeong@naver.com | 1998-10-15 | w      | 2021-05-10 13:13:54 |
+    |          9 | inyoung   | 홍인영 | 1234     | 010-5192-5705 | inyoung2200@naver.com  | 1995-09-23 | w      | 2021-05-10 13:14:25 |
+    |         10 | hohosusu  | 오수인 | 1234     | 010-4419-6525 | hohosusu@naver.com     | 1993-02-17 | w      | 2021-05-10 13:14:36 |
+    +------------+-----------+--------+----------+---------------+------------------------+------------+--------+---------------------+
+    6 rows in set (0.00 sec)
+</code></pre>
+                </div>
+                <!-- //Intro6 -->
+                <!-- Intro7 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">테이블(JOIN)</h2>  
+<pre class="language-js"><code>    create table myMember(
+    myMemberID int(10) unsigned auto_increment comment "고객의 고유 번호",
+    userID varchar(15) not null comment "고객의 아이디",
+    name varchar(10) not null comment "고객의 이름",
+    password varchar(30) not null comment "고객의 비밀번호",
+    email varchar(30) not null comment "고객의 이메일",
+    regTime datetime not null comment "회원가입 시간",
+    primary key(myMemberID))
+    charset=utf8 comment="고객 정보 테이블";
+    
+    create table myReview(
+    myReviewID int(10) unsigned auto_increment comment "리뷰의 고유 번호",
+    myMemberID int(10) unsigned comment "리뷰를 작성한 회원 번호",
+    content tinytext comment "리뷰 내용",
+    regTime datetime not null comment "리뷰 작성 날짜",
+    primary key(myReviewID))
+    charset=utf8 comment="상품 리뷰 테이블";
+</code></pre>  
+<pre class="language-js"><code>    mysql> show tables;
+    +------------------+
+    | Tables_in_test01 |
+    +------------------+
+    | mymember         |
+    | myreview         |
+    +------------------+
+    2 rows in set (0.00 sec)
+</code></pre>                  
+<pre class="language-js"><code>    INSERT INTO mymember(userID, name, password, email, regTime) VALUES('kimyj6419', '김예진', '1234', 'kimyj6419@gmail.com', now())
+    INSERT INTO mymember(userID, name, password, email, regTime) VALUES('silvery92', '김은영', '1234', '9silvery2@gmail.com', now())
+    INSERT INTO mymember(userID, name, password, email, regTime) VALUES('JIMMY', '이학진', '1234', 'yone10@naver.com', now())
+    INSERT INTO mymember(userID, name, password, email, regTime) VALUES('Min', '이창민', '1234', 'leechangmin000@naver.com', now())
+    INSERT INTO mymember(userID, name, password, email, regTime) VALUES('yuurim', '최유림', '1234', 'csm2205@naver.com', now())
+    INSERT INTO mymember(userID, name, password, email, regTime) VALUES('jinmopin', '진재현', '1234', 'jinmopin@gmail.com', now())
+    INSERT INTO mymember(userID, name, password, email, regTime) VALUES('hyj981015', '한연정', '1234', 'hanyeonjeong@naver.com', now());
+    INSERT INTO mymember(userID, name, password, email, regTime) VALUES('inyoung', '홍인영', '1234', 'inyoung2200@naver.com', now());
+    INSERT INTO mymember(userID, name, password, email, regTime) VALUES('hohosusu', '오수인', '1234', 'hohosusu@naver.com', now());
+
+    INSERT INTO myreview(mymemberID, content, regTime) VALUES(1, '가성비가 좋네요', now())
+    INSERT INTO myreview(mymemberID, content, regTime) VALUES(2, '별루인듯', now())
+    INSERT INTO myreview(mymemberID, content, regTime) VALUES(3, '택배는 빨리 오네용', now())
+    INSERT INTO myreview(mymemberID, content, regTime) VALUES(4, '추천합니당', now())
+    INSERT INTO myreview(mymemberID, content, regTime) VALUES(5, '그냥 그래요', now())
+    INSERT INTO myreview(mymemberID, content, regTime) VALUES(6, 'SOSO', now())
+    INSERT INTO myreview(mymemberID, content, regTime) VALUES(7, '좋아요', now());    
+</code></pre>
+<pre class="language-js"><code>    mysql> select * from mymember;
+    +------------+-----------+--------+----------+--------------------------+---------------------+
+    | myMemberID | userID    | name   | password | email                    | regTime             |
+    +------------+-----------+--------+----------+--------------------------+---------------------+
+    |          1 | kimyj6419 | 김예진 | 1234     | kimyj6419@gmail.com      | 2021-05-11 12:17:24 |
+    |          2 | silvery92 | 김은영 | 1234     | 9silvery2@gmail.com      | 2021-05-11 12:17:24 |
+    |          3 | JIMMY     | 이학진 | 1234     | yone10@naver.com         | 2021-05-11 12:17:24 |
+    |          4 | Min       | 이창민 | 1234     | leechangmin000@naver.com | 2021-05-11 12:17:24 |
+    |          5 | yuurim    | 최유림 | 1234     | csm2205@naver.com        | 2021-05-11 12:17:24 |
+    |          6 | jinmopin  | 진재현 | 1234     | jinmopin@gmail.com       | 2021-05-11 12:17:24 |
+    |          7 | hyj981015 | 한연정 | 1234     | hanyeonjeong@naver.com   | 2021-05-11 12:17:27 |
+    +------------+-----------+--------+----------+--------------------------+---------------------+
+    7 rows in set (0.00 sec)
+    
+    mysql> select * from myreview;
+    +------------+------------+--------------------+---------------------+
+    | myReviewID | myMemberID | content            | regTime             |
+    +------------+------------+--------------------+---------------------+
+    |          1 |          1 | 가성비가 좋네요    | 2021-05-11 12:09:40 |
+    |          2 |          2 | 별루인듯           | 2021-05-11 12:09:40 |
+    |          3 |          3 | 택배는 빨리 오네용 | 2021-05-11 12:09:40 |
+    |          4 |          4 | 추천합니당         | 2021-05-11 12:09:40 |
+    |          5 |          5 | 그냥 그래요        | 2021-05-11 12:09:40 |
+    |          6 |          6 | SOSO               | 2021-05-11 12:09:40 |
+    |          7 |          7 | 좋아요             | 2021-05-11 12:11:20 |
+    +------------+------------+--------------------+---------------------+
+    7 rows in set (0.00 sec)
+</code></pre>
+                    <h3 id="intro7-1" class="pt50">JOIN문 사용하기</h3>
+                    <div class="bs-callout bs-callout-info">SELECT 필드이름 FROM 테이블이름 앨리어스 JOIN 연결할 테이블이름 앨리어스 ON(조건문)</div>
+<pre class="language-js"><code>    mysql>  SELECT m.name, r.content, r.regTime FROM mymember m JOIN myreview r ON(m.myMemberID = R.mymemberID);
+    +--------+--------------------+---------------------+
+    | name   | content            | regTime             |
+    +--------+--------------------+---------------------+
+    | 김예진 | 가성비가 좋네요    | 2021-05-11 12:09:40 |
+    | 김은영 | 별루인듯           | 2021-05-11 12:09:40 |
+    | 이학진 | 택배는 빨리 오네용 | 2021-05-11 12:09:40 |
+    | 이창민 | 추천합니당         | 2021-05-11 12:09:40 |
+    | 최유림 | 그냥 그래요        | 2021-05-11 12:09:40 |
+    | 진재현 | SOSO               | 2021-05-11 12:09:40 |
+    | 한연정 | 좋아요             | 2021-05-11 12:11:20 |
+    +--------+--------------------+---------------------+
+    7 rows in set (0.00 sec)
+</code></pre>
+                    <h3 id="intro7-2" class="pt50">필드명 변경하기</h3>
+                    <div class="bs-callout bs-callout-info">SELECT 필드이름 AS 기존 필드이름 대신 출력할 필드명 FROM 테이블이름</div>
+<pre class="language-js"><code>    mysql> SELECT m.name, r.content, r.regTime AS reviewRegtime From mymember m JOin myreview r ON(m.mymemberID = r.mymemberID);
+    +--------+--------------------+---------------------+
+    | name   | content            | reviewRegtime       |
+    +--------+--------------------+---------------------+
+    | 김예진 | 가성비가 좋네요    | 2021-05-11 12:09:40 |
+    | 김은영 | 별루인듯           | 2021-05-11 12:09:40 |
+    | 이학진 | 택배는 빨리 오네용 | 2021-05-11 12:09:40 |
+    | 이창민 | 추천합니당         | 2021-05-11 12:09:40 |
+    | 최유림 | 그냥 그래요        | 2021-05-11 12:09:40 |
+    | 진재현 | SOSO               | 2021-05-11 12:09:40 |
+    | 한연정 | 좋아요             | 2021-05-11 12:11:20 |
+    +--------+--------------------+---------------------+
+    7 rows in set (0.00 sec)  
+</code></pre>
+                    <p>회원 이름을 모두 표사하고 리뷰가 있으면 보여주고 없으면 없다고 표시</p>
+<pre class="language-js"><code>    mysql> SELECT m.name, r.content, r.regTime FROm mymember m LEFT JOIN myreview r ON (m.mymemberID = r.myreviewID);
+    +--------+--------------------+---------------------+
+    | name   | content            | regTime             |
+    +--------+--------------------+---------------------+
+    | 김예진 | 가성비가 좋네요    | 2021-05-11 12:09:40 |
+    | 김은영 | 별루인듯           | 2021-05-11 12:09:40 |
+    | 이학진 | 택배는 빨리 오네용 | 2021-05-11 12:09:40 |
+    | 이창민 | 추천합니당         | 2021-05-11 12:09:40 |
+    | 최유림 | 그냥 그래요        | 2021-05-11 12:09:40 |
+    | 진재현 | SOSO               | 2021-05-11 12:09:40 |
+    | 한연정 | 좋아요             | 2021-05-11 12:11:20 |
+    | 홍인영 | NULL               | NULL                |
+    | 오수인 | NULL               | NULL                |
+    +--------+--------------------+---------------------+
+    9 rows in set (0.00 sec)
+</code></pre>
+                </div>
+                     
+                <!-- //Intro7 -->
+
+                
+            </div>
+            <!-- //col-md-9 -->
+            <!-- //col-md-3 -->
+            <div class="col-md-3">
+                <div class="bs-sidebar hidden-print" role="complementary">
+                    <ul class="nav bs-sidenav">
+                        <li><a href="#intro1">MYSQL</a></li>
+                        <li><a href="#intro2">MYSQL 설치</a></li>
+                        <li><a href="#intro3">데이터베이스 만들기</a></li>
+                        <li><a href="#intro4">테이블</a>
+                            <ul class="nav">
+                                <li><a href="#intro4-1">테이블 만들기</a></li>
+                                <li><a href="#intro4-2">테이블 전체보기</a></li>
+                                <li><a href="#intro4-3">테이블 필드 보기</a></li>
+                                <li><a href="#intro4-3">테이블 삭제</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#intro5">테이블 수정</a>
+                            <ul class="nav">
+                                <li><a href="#intro5-1">필드 추가하기</a></li>
+                                <li><a href="#intro5-2">필드 수정하기</a></li>
+                                <li><a href="#intro5-3">필드 삭제하기</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#intro6">테이블 데이터</a>
+                            <ul class="nav">
+                                <li><a href="#intro6-1">데이터 입력하기</a></li>
+                                <li><a href="#intro6-2">데이터 불러오기</a></li>
+                                <li><a href="#intro6-3">데이터 수정하기</a></li>
+                                <li><a href="#intro6-4">데이터 삭제하기</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#intro7">테이블(JOIN)</a>
+                            <ul class="nav">
+                                <li><a href="#intro7-1">JOIN문 사용하기</a></li>
+                                <li><a href="#intro7-2">필드명 변경하기</a></li>
+                            </ul>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </div>
+            <!--//col-md-3 -->
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li>Currently v2.0</li>
+                <li>&middot;</li>
+                <li><a href="https://webstoryboy.github.io/w9/html/">webstoryboy</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/docs.min.js"></script>
+    <script src="../assets/js/prism.js"></script>
+</body>
+
+</html>
